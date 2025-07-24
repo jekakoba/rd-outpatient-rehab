@@ -1,0 +1,76 @@
+html,
+body {
+	scroll-behavior: smooth;
+	overscroll-behavior-y: none;
+}
+
+html,
+body,
+.wrapper {
+	min-height: 100vh;
+	min-height: 100svh;
+}
+
+body {
+	font-family: var(--font-primary);
+	background-color: var(--main-bg-color);
+	font-size: toRem(14);
+	min-width: 320px;
+	line-height: 1.4;
+	color: var(--primary-text-color);
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+	.loaded & {
+	}
+
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		inline-size: 100%;
+		block-size: 100%;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		background: rgba(20, 27, 47, 0.6);
+		backdrop-filter: blur(toRem(6));
+		z-index: 200;
+		pointer-events: none;
+		opacity: 1;
+		transition: opacity 0.3s;
+	}
+
+	&:has(.modal.is-open) {
+		&::before {
+			opacity: 1;
+		}
+	}
+	&:not(:has(.modal.is-open)) {
+		&::before {
+			opacity: 0;
+		}
+	}
+	// &::-webkit-scrollbar {
+	// 	display: none;
+	// 	scrollbar-width: none;
+	// 	-webkit-overflow-scrolling: touch;
+	// 	-ms-overflow-style: none;
+	// }
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@supports (overflow: clip) {
+		overflow: clip;
+	}
+	main {
+		flex: 1 1 auto;
+	}
+	> * {
+		min-width: 0;
+	}
+}

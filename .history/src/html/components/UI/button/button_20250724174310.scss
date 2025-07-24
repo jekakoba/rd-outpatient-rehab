@@ -1,0 +1,65 @@
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	// text-align: center;
+	font-weight: 600;
+	background-color: var(--brand-color);
+	border-radius: toRem(30);
+	color: white;
+	padding-block: toRem(10);
+	padding-inline: toRem(20);
+	transition:
+		background-color 0.3s,
+		border-color 0.3s;
+	min-block-size: toRem(56);
+	border: toRem(1) solid rgba(0, 0, 0, 0.05);
+	box-shadow: 0 0 toRem(12) 0 rgba(0, 0, 0, 0.05);
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--hover-btn-color);
+		}
+	}
+	span {
+		transition: transform 0.3s;
+	}
+	&_small {
+		min-block-size: toRem(40);
+	}
+	&_decor {
+		display: flex;
+		align-items: center;
+		gap: toRem(6);
+		i {
+			flex: 0 0 toRem(16);
+			inline-size: toRem(16);
+			block-size: toRem(16);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: white;
+			transition: transform 0.3s;
+			&::before {
+				color: var(--brand-color);
+				transform: rotate(130deg);
+				transform-origin: center center;
+				font-size: toRem(7);
+				// font-weight: 600;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				i {
+					transform: scale(1.1);
+				}
+				span {
+					transform: translateX(toRem(2));
+				}
+			}
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: toRem(14);
+	}
+}

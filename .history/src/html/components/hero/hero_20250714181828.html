@@ -1,0 +1,110 @@
+<!-- ====== Imports ====== -->
+<link rel='stylesheet' href='@c/hero/hero.scss' />
+
+<section class="hero">
+	<div class="hero__container hero__container_wide">
+		<div class="hero__body">
+			<div class="content content_left anim-block">
+				<div class="label-text">
+					<i class="labe-icon">
+						<img src="@i/icons/rating.svg" width="20" height="20" alt="rating">
+					</i>
+					<span>Інвестиційно-девелоперська компанія в м. Ірпінь</span>
+				</div>
+				<h1 class="title title_white title_main">Будуємо. Продаємо. Супроводжуємо.</h1>
+				<div class="buttons">
+					<include src="@c/UI/button/_button-decor-link.html" locals='{
+							"class": "button button_decor",
+							"url": "projects.html",
+							"text": "Обрати проєкт"
+						}'>
+					</include>
+					<include src="@c/UI/button/_button-decor-link-var2.html" locals='{
+							"class": "button button_decor button_decor-transparent-var2",
+							"text": "Умови інвестування",
+							"url": "#pricing"
+						}'>
+					</include>
+				</div>
+			</div>
+		</div>
+		<div class="hero__slider-body">
+			<div class="hero__slider swiper" data-swiper-hero>
+				<div class="hero__wrapper swiper-wrapper">
+					<div class="hero__slide slide-hero swiper-slide">
+						<div class="slide-hero__progress">
+							<span class="slide-hero__progress-line"></span>
+						</div>
+						<div class="slide-hero__number">01</div>
+						<include src="@c/UI/button/_button-decor-link.html" locals='{
+						"class": "button button_decor button_decor-transparent button_white",
+						"url": "#",
+						"text": "Отримати розтермінування"
+					}'>
+						</include>
+						<p class="slide-hero__text">Вигідні умови придбання нерухомості Kvartal Group</p>
+					</div>
+					<div class="hero__slide slide-hero swiper-slide">
+						<div class="slide-hero__progress">
+							<span class="slide-hero__progress-line"></span>
+						</div>
+						<div class="slide-hero__number">02</div>
+						<include src="@c/UI/button/_button-decor-link.html" locals='{
+						"class": "button button_decor button_decor-transparent button_white",
+						"url": "#",
+						"text": "Знижки за оплату 100%"
+					}'>
+						</include>
+						<p class="slide-hero__text">Можливість отримати знижку за 100% оплату</p>
+					</div>
+					<div class="hero__slide slide-hero swiper-slide">
+						<div class="slide-hero__progress">
+							<span class="slide-hero__progress-line"></span>
+						</div>
+						<div class="slide-hero__number">03</div>
+						<include src="@c/UI/button/_button-decor-link.html" locals='{
+						"class": "button button_decor button_decor-transparent button_white",
+						"url": "#",
+						"text": "Kvartal Invest"
+					}'>
+						</include>
+						<p class="slide-hero__text">Вступайте в клуб інвесторів Kvartal - спеціальні умови придбання для перших!</p>
+					</div>
+					<div class="hero__slide slide-hero swiper-slide">
+						<div class="slide-hero__progress">
+							<span class="slide-hero__progress-line"></span>
+						</div>
+						<div class="slide-hero__number">04</div>
+						<include src="@c/UI/button/_button-decor-link.html" locals='{
+						"class": "button button_decor button_decor-transparent button_white",
+						"url": "#",
+						"text": "Kvartal Invest"
+					}'>
+						</include>
+						<p class="slide-hero__text">Вступайте в клуб інвесторів Kvartal - спеціальні умови придбання для перших!</p>
+					</div>
+					<div class="hero__slide slide-hero swiper-slide">
+						<div class="slide-hero__progress">
+							<span class="slide-hero__progress-line"></span>
+						</div>
+						<div class="slide-hero__number">05</div>
+						<include src="@c/UI/button/_button-decor-link.html" locals='{
+						"class": "button button_decor button_decor-transparent button_white",
+						"url": "#",
+						"text": "Kvartal Invest"
+					}'>
+						</include>
+						<p class="slide-hero__text">Вступайте в клуб інвесторів Kvartal - спеціальні умови придбання для перших!</p>
+					</div>
+				</div>
+				<div class="swiper-navigation swiper-navigation_light">
+					<button class="swiper-navigation__btn swiper-navigation__btn_prev _icon-arrow" data-prev-slide type="button" aria-label="The previous slide in slider with preferences of Kvartall Group"></button>
+					<button class="swiper-navigation__btn swiper-navigation__btn_next _icon-arrow" data-next-slide type="button" aria-label="The next slide in slider with preference of Kvartall Group"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hero__bg">
+		<img src="@i/image.jpg" fetchpriority="high" alt="image">
+	</div>
+</section>

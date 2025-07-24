@@ -1,0 +1,78 @@
+.tippy-box[data-animation="fade"][data-state="hidden"] {
+	opacity: 0;
+}
+[data-tippy-root] {
+	// max-width: calc(100vw - 10px);
+	max-inline-size: toRem(200);
+}
+.tippy-box {
+	position: relative;
+	color: var(--text-primary) !important;
+	background-color: white;
+	color: #fff;
+	border-radius: toRem(4);
+	font-size: toRem(12);
+	line-height: 1.4;
+	outline: 0;
+	text-align: center;
+	text-transform: none;
+	transition-property: transform, visibility, opacity;
+}
+.tippy-box[data-placement^="top"] > .tippy-arrow {
+	bottom: 0;
+}
+.tippy-box[data-placement^="top"] > .tippy-arrow:before {
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 100%);
+	border-width: toRem(3) toRem(3) 0;
+	border-top-color: initial;
+	transform-origin: center top;
+}
+.tippy-box[data-placement^="bottom"] > .tippy-arrow {
+	top: 0;
+}
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+	top: toRem(-7);
+	left: 0;
+	border-width: 0 toRem(8) toRem(8);
+	border-bottom-color: initial;
+	transform-origin: center bottom;
+}
+.tippy-box[data-placement^="left"] > .tippy-arrow {
+	right: 0;
+}
+.tippy-box[data-placement^="left"] > .tippy-arrow:before {
+	border-width: toRem(8) 0 toRem(8) toRem(8);
+	border-left-color: initial;
+	right: toRem(-7);
+	transform-origin: center left;
+}
+.tippy-box[data-placement^="right"] > .tippy-arrow {
+	left: 0;
+}
+.tippy-box[data-placement^="right"] > .tippy-arrow:before {
+	left: toRem(-7);
+	border-width: toRem(8) toRem(8) toRem(8) 0;
+	border-right-color: initial;
+	transform-origin: center right;
+}
+.tippy-box[data-inertia][data-state="visible"] {
+	transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+}
+.tippy-arrow {
+	width: toRem(16);
+	height: toRem(16);
+	color: white;
+}
+.tippy-arrow:before {
+	content: "";
+	position: absolute;
+	border-color: transparent;
+	border-style: solid;
+}
+.tippy-content {
+	position: relative;
+	padding: toRem(5) toRem(9);
+	z-index: 1;
+}

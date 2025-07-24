@@ -1,0 +1,35 @@
+<!-- ====== Imports ====== -->
+<link rel='stylesheet' href='@c/hero/hero.scss' />
+
+<section class="hero">
+	<div class="hero__container">
+		<div class="hero__body">
+			<div class="content content_left anim-block">
+				<div class="label-text">
+					<i class="labe-icon">
+						<img src="@i/icons/rating.svg" width="20" height="20" alt="rating">
+					</i>
+					<span>Інвестиційно-девелоперська компанія в м. Ірпінь</span>
+				</div>
+				<h1 class="title title_white title_main">Break Free From Addiction.<span>While Staying Connected to Life</span></h1>
+				<div class="buttons">
+					<include src="@c/UI/button/_button-decor-link.html" locals='{
+							"class": "button button_decor",
+							"url": "projects.html",
+							"text": "Обрати проєкт"
+						}'>
+					</include>
+					<include src="@c/UI/button/_button-decor-link-var2.html" locals='{
+							"class": "button button_decor button_decor-transparent-var2",
+							"text": "Умови інвестування",
+							"url": "#pricing"
+						}'>
+					</include>
+				</div>
+			</div>
+		</div>
+		<div class="image">
+			<img src="@i/image01.jpg" fetchpriority="high" alt="image">
+		</div>
+	</div>
+</section>

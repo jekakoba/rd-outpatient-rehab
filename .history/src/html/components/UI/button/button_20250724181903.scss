@@ -1,0 +1,54 @@
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--brand-color);
+	border-radius: toRem(30);
+	padding-block: toRem(7);
+	padding-inline: toRem(20);
+	transition: background-color 0.3s;
+	min-block-size: toRem(56);
+	span {
+		letter-spacing: toRem(-0.42);
+		color: white;
+		font-weight: 700;
+		text-align: center;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--hover-btn-color);
+		}
+	}
+	&_small {
+		min-block-size: toRem(40);
+	}
+	&_decor {
+		display: flex;
+		align-items: center;
+		gap: toRem(6);
+		i {
+			flex: 0 0 toRem(32);
+			inline-size: toRem(32);
+			block-size: toRem(32);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: white;
+			transition: transform 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				i {
+					transform: scale(1.1);
+				}
+				span {
+					transform: translateX(toRem(2));
+				}
+			}
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: toRem(14);
+	}
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML components</title>
+	<link rel="stylesheet" href="files/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<header>
+			<h1>Cycles with arrays and json file</h1>
+			<p>
+				This document describes the connection of the components in the cycles, the content of the content from the JSON file.
+			</p>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="tree.html">Structure</a>
+				<a href="posthtml.html">HTML components</a>
+				<a href="conditions.html">Conditions and conditional expressions</a>
+				<a href="settings.html">Setting up</a>
+			</nav>
+		</header>
+
+		<section>
+			<h2>Using Content with Json:</h2>
+			<ul>
+				<li><strong>response</strong> - contains a total of json file,</li>
+				<li><strong>post</strong> (You can specify your name) - contains one json file item,</li>
+				<li><strong>post</strong> (You can specify your name) - contains one json file item,</li>
+				<li><strong>index</strong> - item index (can you use)</li>
+			</ul>
+
+			<h3>Connecting the component cycle with JSON</h3>
+			<p>Example</p>
+			<div class="code-block">
+				<code>
+                  &lt;fetch url="@с/card/cards-data.json"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;each loop="post, index in response"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;include src="@с/card/_card.html"&lt;/include&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/each&gt;<br>
+                  &lt;/fetch&gt;
+               </code>
+			</div>
+			<p>*When calling the component object <code>post</code> and <code>index</code> are transmitted automatically and available in the component as follows:</p>
+			<code>_card.html</code>
+			<div class="code-block">
+				<code>
+                  &lt;div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;{{post.title}}&lt;/h2&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;{{post.text}}&lt;/p&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;{{post.date}}&lt;/span&gt;<br>
+                  &lt;/div&gt;
+               </code>
+			</div>
+
+			<h3>Content output immediately with a cycle with JSON</h3>
+			<p>Example</p>
+			<div class="code-block">
+				<code>
+                  &lt;fetch url="@с/card/cards-data.json"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;each loop="post, index in response"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;{{post.title}}&lt;/h2&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;{{post.description}}&lt;/p&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="{{post.img}}" alt="{{post.title}}"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/each&gt;<br>
+                  &lt;/fetch&gt;
+               </code>
+			</div>
+		</section>
+
+		<section>
+			<h2>Using the array cycle transmitted in the parameter <code>list</code>.</h2>
+
+			<h3>Version 1.</h3>
+			<p>An example of a call</p>
+			<p>*In this case, parameters <code>item</code> nf <code>index</code> can not be transmitted as they are already transmitted automatically</p>
+			<div class="code-block">
+				<code>
+                  &lt;ul&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;each loop="item, index in ['facebook', 'telegram', 'facebook','twitter']"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;include src="@с/card/_list-item.html"&gt;&lt;/include&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/each&gt;<br>
+                  &lt;/ul&gt;
+               </code>
+			</div>
+			<p>An example of output in a component</p>
+			<div class="code-block">
+				<code>
+                  &lt;li&gt;&lt;span&gt;{{index}}&lt;/span&gt;&nbsp;{{item}}&lt;/li&gt;
+               </code>
+			</div>
+
+			<h3>Version 2.</h3>
+			<p>An example of a call</p>
+			<div class="code-block">
+				<code>
+                  &lt;include<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;src="@с/card/_list.html"<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;locals='{"list": ['facebook', 'telegram', 'facebook','twitter']}'&gt;<br>
+                  &lt;/include&gt;
+               </code>
+			</div>
+			<p>An example of output in a component</p>
+			<div class="code-block">
+				<code>
+                  &lt;ul&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;each loop="item, index in list"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;{{ index }}: {{ item }}&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/each&gt;<br>
+                  &lt;/ul&gt;
+               </code>
+			</div>
+		</section>
+
+	</div>
+
+	<script src="files/script.js"></script>
+
+</body>
+
+</html>

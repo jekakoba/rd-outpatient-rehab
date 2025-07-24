@@ -1,0 +1,28 @@
+<link rel='stylesheet' href='@c/faq/faq.scss' />
+
+
+<section class="faq _space-section">
+	<div id="faq" class="faq__container section-anim" data-watch data-watch-once data-watch-threshold="0.3">
+		<div class="content content_left">
+			<div class="label-block">
+				<i>
+					<img src="@i/icons/cup.svg" width="14" height="14" alt="cup">
+				</i>
+				<span>Новини</span>
+			</div>
+			<h2 class="title">Нaйчастіші <br> питання</h2>
+			<include src="@c/UI/button/_button-decor.html" locals='{
+					"class": "button button_decor",
+					"text": "Консультація"
+				}'>
+			</include>
+		</div>
+		<div class="spoilers">
+			<fetch url="@c/UI/spoiler/faq.json">
+				<each loop="spoiler, index in response">
+					<include src="@c/UI/spoiler/_spoiler-faq.html"></include>
+				</each>
+			</fetch>
+		</div>
+	</div>
+</section>

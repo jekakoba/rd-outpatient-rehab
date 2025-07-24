@@ -1,0 +1,14 @@
+{
+  "arrow": {
+    "encodedCode": "\\ea01",
+    "prefix": "_icon",
+    "className": "_icon-arrow",
+    "unicode": "&#59905;"
+  },
+  "star": {
+    "encodedCode": "\\ea02",
+    "prefix": "_icon",
+    "className": "_icon-star",
+    "unicode": "&#59906;"
+  }
+}

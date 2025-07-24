@@ -1,0 +1,21 @@
+[class*="_icon-"] {
+  font-family: 'icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+:global {
+:root {
+--_icon-arrow: "\ea01";
+--_icon-star: "\ea02";
+}
+._icon-arrow::before { content: var(--_icon-arrow); }
+._icon-star::before { content: var(--_icon-star); }
+
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML components</title>
+	<link rel="stylesheet" href="files/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<header>
+			<h1>Setting up project</h1>
+			<p>
+				This document describes the connection and use of TailWindcss, setting up image optimization and styles.
+			</p>
+			<p>File settings of the assembly <code>template.config.js</code> in the root of the project</p>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="tree.html">Structure</a>
+				<a href="posthtml.html">HTML components</a>
+				<a href="conditions.html">Conditions and conditional expressions</a>
+				<a href="loop.html">Cychers that json</a>
+			</nav>
+		</header>
+
+		<section>
+			<h2>How to turn TailWindcss in the project:</h2>
+			<p>must be specified <code>tailwindcss: true</code></p>
+			<div class="code-block">
+				<code color>
+                  export default {<br>
+                  <span style="color: #bcbcbc;">
+                     &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green; font-weight: 600;">tailwindcss: true,</span><br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;cleanCss: true,<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;images: {<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                  </span>
+                  }
+               </code>
+			</div>
+			<p>In the main style file<code>src/scss/main.scss</code> In the very top you need to proceed the following</p>
+			<div class="code-block">
+				<code>
+                  @import "tailwindcss";
+               </code>
+			</div>
+			<p>File <code>tailwindcss.scss</code> used to import TailWindcss styles and write components styles TailwindCSS</p>
+			<p>File <code>tailwind.config.js</code> that in the draft root is used to set up TailWindcss</p>
+		</section>
+
+		<section>
+			<h2>CSS Cleaning in Build from the Disadvanty:</h2>
+			<p>must be specified <code>cleanCss: true</code></p>
+			<div class="code-block">
+				<code>
+                  export default {<br>
+                  <span style="color: #bcbcbc;">
+                     &nbsp;&nbsp;&nbsp;&nbsp;tailwindcss: true,<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green; font-weight: 600;">cleanCss: true,</span><br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;images: {<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                  </span>
+                  }
+               </code>
+			</div>
+		</section>
+
+		<section>
+			<h2>Optimization of images in Build:</h2>
+			<p>To optimize in the original format specify <code>imageMin: true</code>.</p>
+			<p> To create Webp you need to specify <code>imageMin: true</code> та <code>makeWebp: true</code>. В <code>ignore-webp</code> The array is indicated classes for which not to create Webp.</p>
+			<p>To automatically fill the attributes <code>width</code> and <code>height</code> specify <code>addImgSizes: true</code>.</p>
+			<p>To adjust the quality of images to specify in <code>imageQuality: { jpg: 80, png: [0.6, 0.8], webp: 80 }</code>.</p>
+			<div class="code-block">
+				<code>
+                  export default {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;images: {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;imageMin: true,<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;makeWebp: true<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;addImgSizes: true<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ignoreWebpClasses: ['ignore-webp'],<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;imageQuality: {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jpg: 80,<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;png: [0.6, 0.8],<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webp: 80<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                  }
+               </code>
+			</div>
+		</section>
+
+	</div>
+
+	<script src="files/script.js"></script>
+
+</body>
+
+</html>

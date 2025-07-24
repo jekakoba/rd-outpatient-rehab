@@ -1,0 +1,51 @@
+.hero {
+	// .hero__container
+
+	&__container {
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 100, 50, 0, $containerWidth, 767.98);
+		.image {
+			padding-block-end: 42.004%;
+			@media (min-width: $mobile) {
+				flex: 0 0 50.089%;
+			}
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+
+	// .hero__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(32);
+		@media (min-width: $mobile) {
+			flex: 1 1 auto;
+		}
+	}
+
+	.content {
+		// gap: toRem(20);
+		// .content_left
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(32);
+		align-items: start;
+	}
+
+	.title {
+		// .title_main
+
+		&_main {
+		}
+	}
+}

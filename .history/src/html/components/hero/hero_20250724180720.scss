@@ -1,0 +1,30 @@
+.hero {
+	// .hero__container
+
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: toRem(100);
+		.image {
+			flex: 0 0 50.089%;
+		}
+	}
+
+	// .hero__body
+
+	&__body {
+		flex: 1 1 auto;
+	}
+
+	.content {
+		gap: toRem(20);
+		// .content_left
+	}
+
+	.title {
+		// .title_main
+
+		&_main {
+		}
+	}
+}

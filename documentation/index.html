@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Documentation to Vite Collection</title>
+	<link rel="stylesheet" href="files/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<header>
+			<h1>Vite -based assembly</h1>
+			<p>This document describes the settings and structure of the assembly based on Vite.</p>
+			<nav>
+				<a href="tree.html">Structure</a>
+				<a href="posthtml.html">HTML components</a>
+				<a href="conditions.html">Conditions and conditional expressions</a>
+				<a href="loop.html">Cychers that json</a>
+				<a href="settings.html">Setting up</a>
+			</nav>
+		</header>
+
+		<section>
+			<h2>The main teams</h2>
+			<ul>
+				<li><span class="command">yarn d</span> — запуск сервRunning server for development.
+				<li><span class="command">yarn b</span> — Bild Project.</li>
+				<li><span class="command">yarn p</span> — View Bild on the server.</li>
+				<li><span class="command">yarn f</span> — generation of iconic font and font conversion.</li>
+				<li><span class="command">yarn i</span> — Generation only iconic font.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Alias ​​(abbreviations) of paths</h2>
+
+			<ul>
+				<li><code>@h/</code>: <code>./src/html/</code></li>
+				<li><code>@c/</code>: <code>./src/html/components/</code></li>
+				<li><code>@j/</code>: <code>/src/js/</code></li>
+				<li><code>@s/</code>: <code>/src/scss/</code></li>
+				<li><code>@i/</code>: <code>/src/assets/img/</code></li>
+				<li><code>@f/</code>: <code>/src/assets/files/</code></li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Basic plugins to work with HTML components</h2>
+			<p>The assembly uses <code>@vituum/vite-plugin-posthtml</code> with the following plugins:</p>
+			<ul>
+				<li><strong>posthtml-fetch</strong> — Allows you to connect HTML fragments from other files.</li>
+				<li><strong>posthtml-expressions</strong> — adds the opportunity to work with conditional expressions and variables in HTML.</li>
+				<li><strong>posthtml-beautify</strong> — automatically format HTML files.</li>
+				<li><strong>posthtml-webp</strong> — Adds Webp for Image Support.</li>
+				<li><strong>posthtml-replace</strong> — Replaces certain template values ​​in HTML.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Style development</h2>
+			<p>SCSS is used to write styles. Basic plugins:</p>
+			<ul>
+				<li><strong>vite-plugin-purgecss</strong> — Removes unnecessary CSS styles during an optimization bill.</li>
+				<li><strong>vite-plugin-sass-glob-import</strong> — Provides automatic connection of component styles with<code>src/html/components/</code>.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Image optimization</h2>
+			<p>Images are compressed and converted to Webp using <Code> vite-plugin-imgemin </code> with the following modules:</p>
+			<ul>
+				<li><strong>imagemin-mozjpeg</strong> — squeezing JPEG images.</li>
+				<li><strong>imagemin-webp</strong> — converts the image to the format WebP.</li>
+				<li><strong>imagemin-pngquant</strong> — Optimizes PNG image.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>The structure of folders of the project</h2>
+			<ul>
+				<li><strong>src/</strong> — Main Directory for Development.</li>
+				<li><strong>src/assets/</strong> — Storage of files, images, fonts and videos.</li>
+				<li><strong>src/html/</strong> — HTML templates.</li>
+				<li><strong>src/pages/</strong> — site pages.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>System files</h2>
+			<ul>
+				<li><strong>snippets.json</strong> — contains recommended snowipets to work with a template.</li>
+				<li><strong>template.config.js</strong> —The template settings file.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Fonts and icons</h2>
+			<p>For fonts and icons used folder <code>fonts-convert/</code>:</p>
+			<ul>
+				<li>Fonts in format <code>fttf</code> format are at the root folders <code>fonts-convert/</code>.</li>
+				<li>SVG Icon to generate font — у <code>fonts-convert/icons/</code>.</li>
+			</ul>
+			<p>The font generation process creates fonts in format <code>woff2</code> in the folder <code>src/assets/fonts/</code>, and also generates files <code>fonts.scss</code> та <code>icons.scss</code> у <code>src/scss/fonts/</code> with
+				classes for
+				fonts and icons. Additional materials for icons (optimized SVG, cheat on icons) — у <code>plugins/ifont-gen/dist/</code>.</p>
+			<p>Also in the folder src/html/components/other/ is created <code>_fonts.html</code> connected in<code>head</code>, This connects fonts in <code>head</code> with attributes <code>preload</code> and <code>crossorigin</code> for a quick one
+				Loading.</p>
+		</section>
+
+	</div>
+
+</body>
+
+</html>

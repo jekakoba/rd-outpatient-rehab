@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="@c/modal/modal.scss">
+
+<div class="modal" id="modal-contact" aria-hidden="true" role="dialog">
+	<div class="modal__overlay" tabindex="-1" data-modal-close>
+		<div class="modal__content">
+			<div class="modal__body">
+				<div class="modal__header">
+					<button class="button button_circle" data-modal-close type="button">
+						<i class="_icon-close"></i>
+					</button>
+				</div>
+				<div class="modal__wrapper">
+					<div class="modal__wrapper-scroll">
+						<h3 class="title title_600 title_xl">Отримайте ексклюзивні <br> варіанти квартир першими!</h3>
+						<form class="form" action="#" method="post">
+							<div class="form__row">
+								<div class="form__item">
+									<label class="form__label" for="name">Мене звати*</label>
+									<div class="form__input-wrapper">
+										<input id="name" class="input" required autocomplete="off" type="text" name="name" placeholder="Ваше Імʼя">
+									</div>
+								</div>
+								<div class="form__item">
+									<label class="form__label" for="phone">Мій телефон*</label>
+									<div class="form__input-wrapper">
+										<input id="phone" class="input" required autocomplete="off" type="number" name="phone" placeholder="+380 (ХХ) - ХХХ - ХХХХ">
+									</div>
+								</div>
+							</div>
+							<div class="form__row" data-one-select>
+								<div class="form__item">
+									<label class="form__label" for="object">Оберіть обʼєкт*</label>
+									<div class="form__input-wrapper">
+										<select class="select wpcf7-select" required id="object" name="object">
+											<option value="" selected>Не обрано</option>
+											<option value="object-1">Обʼєкт 1</option>
+											<option value="object-2">Обʼєкт 2</option>
+											<option value="object-3">Обʼєкт 3</option>
+											<option value="object-4">Обʼєкт 4</option>
+										</select>
+									</div>
+								</div>
+								<div class="form__item">
+									<label class="form__label" for="rooms">Оберіть к-ть кімнат*</label>
+									<div class="form__input-wrapper">
+										<select class="select wpcf7-select" required id="rooms" name="rooms">
+											<option value="" selected>Не обрано</option>
+											<option value="room-1">1 кімната</option>
+											<option value="room-2">2 кімнати</option>
+											<option value="room-3">3 кімнати</option>
+											<option value="room-4">4 кімнати</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form__item">
+								<label class="form__label" for="message">Ваше повідомлення*</label>
+								<div class="form__input-wrapper">
+									<textarea class="input" id="message" name="message" placeholder="Хочу повідомити"></textarea>
+								</div>
+							</div>
+							<div class="form__bottom">
+								<button class="button button_decor" type="submit">
+									<i class="_icon-arrow"></i>
+									<span>Надіслати</span>
+								</button>
+								<p class="form__text">Натискаючи кнопку «Надіслати», ви погоджуєтесь на обробку персональних даних, як зазначено в нашій політиці конфіденційності</p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,140 @@
+.journey {
+	display: grid;
+	gap: toRem(70);
+	position: relative;
+	.timeline-decor {
+		position: absolute;
+		inset-inline-start: 0;
+		inset-block-start: 0;
+		transform: translate(-91%, -90%);
+		@media (max-width: $mobile) {
+			transform: translate(-27%, -90%);
+		}
+	}
+	@media (max-width: $mobile) {
+		padding-inline-start: toRem(34);
+	}
+	// .journey__timeline
+
+	&__timeline {
+		position: absolute;
+		inset-inline-start: 0;
+		inset-block-start: 0;
+		inline-size: toRem(4);
+		block-size: calc(100% + 70px);
+		background-color: var(--bg-white);
+		@media (max-width: $mobile) {
+			inset-inline-start: toRem(34);
+		}
+	}
+
+	// .journey__item
+
+	&__item {
+	}
+}
+.item-journey {
+	display: flex;
+	gap: toRem(56);
+	@media (min-width: $mobile) {
+		align-items: center;
+	}
+	@media (max-width: $mobile) {
+		gap: toRem(20);
+	}
+
+	// .item-journey__dot-wrapper
+
+	&__dot-wrapper {
+		position: absolute;
+		inset-inline-start: 0;
+		inset-block-start: 0;
+		transform: translateX(-40%);
+		padding-block: toRem(10);
+		background-color: var(--bg-light-color);
+		position: relative;
+		z-index: 3;
+		@media (max-width: $mobile) {
+			align-self: start;
+		}
+		@media (min-width: $mobileSmall) and (max-width: $mobile) {
+			inset-block-start: toRem(8);
+		}
+	}
+
+	// .item-journey__dot
+
+	&__dot {
+		flex: 0 0 toRem(16);
+		inline-size: toRem(16);
+		block-size: toRem(16);
+		border-radius: 50%;
+		background-color: var(--bg-white);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+		&::before {
+			color: var(--text-white);
+			font-size: toRem(18);
+		}
+		&_check {
+			flex: 0 0 toRem(24);
+			inline-size: toRem(24);
+			block-size: toRem(24);
+			background-color: var(--bg-red);
+			@extend %ic;
+			&::before {
+				content: "\ea03";
+			}
+		}
+		&_puls {
+			background-color: var(--bg-red);
+			&::before {
+				content: "";
+				position: absolute;
+				width: 150%;
+				height: 150%;
+				inset-inline-start: 50%;
+				inset-block-start: 50%;
+				transform: translate(-50%, -50%);
+				background-color: #f5bbb4;
+				border-radius: inherit;
+				animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+
+		@include adaptiveValue("gap", 156, 70, 0, $containerWidth, 767.98);
+		@media (min-width: $mobile) {
+			align-items: center;
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			gap: toRem(16);
+		}
+	}
+
+	// .item-journey__year
+
+	&__year {
+		font-weight: 800;
+		letter-spacing: toEm(-4.3, 87);
+		@include adaptiveValue("font-size", 87, 45, 0, $containerWidth, 767.98);
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(32);
+		}
+	}
+
+	// .item-journey__value
+
+	&__value {
+		font-weight: 300;
+		letter-spacing: toEm(-2, 87);
+		@include adaptiveValue("font-size", 24, 16, 0, $containerWidth, 767.98);
+	}
+}

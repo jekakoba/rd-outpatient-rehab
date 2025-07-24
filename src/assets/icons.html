@@ -1,0 +1,247 @@
+
+      <!DOCTYPE html>
+      <html lang="en">
+         <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Icons</title>
+            
+      <style>
+         @font-face {
+            font-family: 'IconFont';
+            src: url('data:font/woff2;base64,d09GMgABAAAAAALAAAsAAAAABiwAAAJ0AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACCfgqBAIEGATYCJAMMCwgABCAFg3IHNhtlBVGUxkUi+yNEOUyH4ScAQAlIAAAAAICBRMUcq+ntLGw31ajEx1+eCg54DVIDBAwo3Fyr7IG8G/8qQi3JJwWoEAppD0qT5klY8wEAQY21PXu5f8yTeqiWRSXiWTWKeGNIhOqR9JRAGyDsQaoiZtiAky2YxIdB6wCE5nqVKV9mqFl4ud0BAqfq+0uwlNXENfkL6O09AbDann5Po4jUgc13PsCoPG+hAc1mPnNrO+7hd5oiIRJjDAnxV9cIwKE/nBydXN3CMihJsDMDrQ1gJBfWXt3FldxoNIIuBI7oVJnLzEHOyMBS/7z4Iy9BYhR6QHFnYTuvNxmAev26swy7ScAACsgAGkSl7ytGISxUYW1NAtprBPhSn2YhjsYkiL+uJHoBSIFfgs+l0vUAUggKAMccFwPSqRHKWwpEiHWc7qbYsy976d7m1vb58+Pwc3VzS01dm715v/LF7cVl/j4MDw+1/eSi9oklyEVZOak8XXzCJrJX/QOoDxqc9JXBoNH9RQPwuyUTCxxwnWyKj8w34Y2KkqgA5KqbKABFSKCvBCwW+Fcn0JvjCEw4ESROzMAVBi+gkSDc4CEcd2CIxS3pkmZ7CFGCQmg3Aku74BJ/BnGFZQLQyCRuCLeMO7Ac4ZZKbiZ7SAr1tcmpXpP/CoqFq53uies6Jxzafn7HKSViJWRR/2H99qOIQ8c54klOQiFkLJw3ZKRdiZTdrnPWT1uTI6xNTvWa/FdQLGW37574wbIxDm3vAada8ulKyK6q/7B++1HEoZPYHPFkjQ3mhpCx2J02ZKRdLXjKbperuajWbjbiH6qDg663ZtJMmxnMFXP+mVVRDAA=') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+         }
+
+         * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+         }
+
+         body {
+            color: #696969;
+            font: 12px/1.5 tahoma, arial sans-serif;
+         }
+
+         a {
+            color: #333;
+            text-decoration: underline;
+         }
+
+         a:hover {
+            color: rgb(9, 73, 209);
+         }
+
+         .icon {
+            font-family: 'IconFont';
+            font-size: 24px;
+            transition: all 0.4s ease;
+         }
+
+         .header {
+            color: #333;
+            text-align: center;
+            padding: 80px 0 40px 0;
+            font-size: 14px;
+         }
+
+         .header .logo svg {
+            height: 120px;
+            width: 120px;
+         }
+
+         .header h1 {
+            font-size: 42px;
+            padding: 26px 0 10px 0;
+         }
+
+         .header h1 span {
+            text-transform: capitalize;
+         }
+
+         .header sup {
+            font-size: 14px;
+            margin: 8px 0 0 8px;
+            position: absolute;
+            color: #7b7b7b;
+         }
+
+         .info {
+            color: #999;
+            font-weight: normal;
+            max-width: 346px;
+            margin: 0 auto;
+            font-size: 12px;
+            transition: all 0.4s ease;
+            text-align: left;
+         }
+
+         .info td {
+            padding: 2px 0;
+         }
+
+         .info .info-value {
+            padding-left: 5px;
+         }
+            
+         .info .info-value span {
+            cursor: pointer;
+            transition: all 0.4s ease;
+         }
+
+         .info .info-value span:hover {
+            color: #3c75e4;
+         }
+
+         .copy-message {
+            text-align: center;
+            padding: 5px 20px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #3c75e4;
+            border-radius: 3px;
+            border: 1px solid #3c75e4;
+            opacity: 0;
+            transition: all 0.4s ease;
+         }
+
+         .copy-show .copy-message {
+            opacity: 1;
+         }
+
+         .icons {
+            position: relative;
+            max-width: 1190px;
+            margin: 0 auto;
+            padding-top: 40px;
+         }
+
+         .icons ul {
+            text-align: center;
+         }
+
+         .icons ul li {
+            vertical-align: top;
+            width: 160px;
+            display: inline-block;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .02);
+            border-radius: 3px;
+            padding: 20px 15px;
+            margin-right: 10px;
+            margin-top: 10px;
+            transition: all 0.4s ease;
+         }
+
+         .icons ul li:hover {
+            background-color: rgba(0, 0, 0, .06);
+         }
+
+         .icons ul li:hover span.icon {
+            color: #3c75e4;
+            opacity: 1;
+         }
+
+         .icons ul li h4 {
+            font-weight: normal;
+            padding: 10px 0 5px 0;
+            display: block;
+            color: #8c8c8c;
+            font-size: 15px;
+            line-height: 12px;
+            opacity: 0.8;
+            transition: all 0.4s ease;
+            margin-bottom: 10px;
+         }
+
+         .icons ul li:hover h4 {
+            opacity: 1;
+            color: #3c75e4;
+         }
+         .icons ul li:hover .info {
+            color: #616161;
+         }
+      </style>
+         </head>
+         <body>
+
+            <div class="header">
+               <h1><span>template</span> icons<sup>1.0.0</sup></h1>
+            </div>
+
+            <div class="icons">
+               <div data-copy-message class="copy-message">qweqwe</div>
+               <ul>
+                  
+      <li>
+         <span class="icon _icon-arrow">&#59905;</span>
+         <h4 class="name">arrow</h4>
+         <table class="info">
+            <tr>
+               <td>class:</td>
+               <td class="info-value"><span data-copy="_icon-arrow" title="Click to copy">_icon-arrow</span></td>
+            </tr>
+            <tr>
+               <td>unicode:</td>
+               <td class="info-value"><span data-copy="&amp;#59905;" title="Click to copy">&amp;#59905;</span></td>
+            </tr>
+            <tr>
+               <td>encoded:</td>
+               <td class="info-value"><span data-copy="\ea01" title="Click to copy">\ea01</span></td>
+            </tr>
+         </table>
+      </li>
+      <li>
+         <span class="icon _icon-star">&#59906;</span>
+         <h4 class="name">star</h4>
+         <table class="info">
+            <tr>
+               <td>class:</td>
+               <td class="info-value"><span data-copy="_icon-star" title="Click to copy">_icon-star</span></td>
+            </tr>
+            <tr>
+               <td>unicode:</td>
+               <td class="info-value"><span data-copy="&amp;#59906;" title="Click to copy">&amp;#59906;</span></td>
+            </tr>
+            <tr>
+               <td>encoded:</td>
+               <td class="info-value"><span data-copy="\ea02" title="Click to copy">\ea02</span></td>
+            </tr>
+         </table>
+      </li>
+               </ul>
+            </div>
+
+            <script>
+               let timeoutId = null;
+               document.addEventListener('click', function (event) {
+                  const target = event.target
+                  const copyValue = target.getAttribute('data-copy')
+                  const copyModal = document.querySelector('[data-copy-message]')
+
+                  if (copyValue) {
+                     if (timeoutId) {
+                        clearTimeout(timeoutId)
+                     }
+                     navigator.clipboard.writeText(copyValue).then(function () {
+                        copyModal.innerText = `Copied: ${copyValue}`
+                        document.documentElement.classList.add('copy-show')
+                        timeoutId = setTimeout(() => {
+                           document.documentElement.classList.remove('copy-show')
+                        }, 1500)
+                     }).catch(function (error) {
+                        copyModal.innerText = `Failed to copy: ${error} `
+                        document.documentElement.classList.add('copy-show')
+                        timeoutId = setTimeout(() => {
+                           document.documentElement.classList.remove('copy-show')
+                        }, 1500)
+                     })
+                  }
+               })
+            </script>
+         </body>
+      </html>

@@ -1,0 +1,148 @@
+.cards {
+	display: grid;
+	gap: toRem(12);
+	@media (min-width: $tablet) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	&__item {
+		border-radius: var(--main-border-radius);
+		background-color: var(--white-color);
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: toRem(32);
+		border: toRem(1) solid rgba(0, 0, 0, 0.05);
+		box-shadow: 0 0 toRem(12) 0 rgba(0, 0, 0, 0.05);
+		@media (min-width: $mobile) and (max-width: $tablet) {
+			&:nth-child(3n) {
+				grid-column: span 2;
+			}
+		}
+		@media (min-width: $mobile) {
+			padding-block: toRem(32);
+			padding-inline: toRem(28);
+		}
+		@media (max-width: $mobile) {
+			padding: toRem(24);
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(16);
+		}
+	}
+
+	&__icon {
+		border-radius: var(--middle-border-radius);
+		border: toRem(1) solid rgba(0, 0, 0, 0.05);
+		flex: 0 0 toRem(64);
+		inline-size: toRem(64);
+		block-size: toRem(64);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: $mobile) {
+			flex: 0 0 toRem(44);
+			inline-size: toRem(44);
+			block-size: toRem(44);
+		}
+		img {
+			inline-size: toRem(36);
+			block-size: toRem(36);
+			object-fit: contain;
+			@media (max-width: $mobile) {
+				inline-size: toRem(26);
+				block-size: toRem(26);
+			}
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(12);
+		@media (max-width: $mobile) {
+			gap: toRem(8);
+		}
+	}
+
+	&__title {
+		color: var(--dark-color);
+		font-size: toRem(20);
+		font-weight: 600;
+		letter-spacing: toRem(-0.2);
+		@media (min-width: $mobileSmall) and (max-width: $tablet) {
+			font-size: toRem(22);
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+		}
+	}
+
+	&__text {
+		@media (min-width: $mobileSmall) and (max-width: $tablet) {
+			font-size: toRem(18);
+		}
+	}
+	&__number {
+		border-radius: var(--middle-border-radius);
+		border: toRem(1) solid rgba(0, 0, 0, 0.05);
+		flex: 0 0 toRem(64);
+		inline-size: toRem(64);
+		block-size: toRem(64);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: var(--brand-color);
+		font-size: toRem(24);
+		font-weight: 600;
+		letter-spacing: toRem(-0.24);
+		@media (max-width: $mobile) {
+			flex: 0 0 toRem(44);
+			inline-size: toRem(44);
+			block-size: toRem(44);
+			font-size: toRem(14);
+		}
+	}
+
+	&_decors {
+		gap: toRem(32);
+		&:not(:last-child) {
+			margin-block-end: toRem(44);
+			@media (max-width: $mobile) {
+				margin-block-end: toRem(36);
+			}
+		}
+		.cards__item {
+			position: relative;
+			&:not(:last-child) {
+				&::before {
+					content: "";
+					position: absolute;
+
+					right: 0;
+					width: toRem(16);
+					height: toRem(1);
+					background-color: var(--brand-color);
+					@media (min-width: $tablet) {
+						inset-block-start: 50%;
+						transform: translate(150%, -50%);
+					}
+					@media (max-width: $tablet) {
+						inset-block-end: toRem(-18);
+						inset-inline-start: 50%;
+						transform: translate(-50%, 0%) rotate(90deg);
+					}
+				}
+			}
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: auto;
+			.cards__item {
+				&:nth-child(3n) {
+					grid-column: span 1;
+				}
+			}
+		}
+	}
+}

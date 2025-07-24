@@ -1,0 +1,163 @@
+// Default position
+.anim-block {
+	&.content {
+		.label-text,
+		.title,
+		.buttons {
+			transform: translateY(15%);
+			opacity: 0;
+			transition:
+				opacity 1.5s,
+				transform 1s;
+		}
+
+		.label-text {
+			transition-delay: 0.4s;
+		}
+		.title {
+			transition-delay: 0.6s;
+		}
+		.buttons {
+			transition-delay: 0.8s;
+		}
+	}
+}
+
+// Anim position
+
+.loaded {
+	.anim-block {
+		&.content {
+			.label-text,
+			.title,
+			.buttons {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+//===================//
+
+.card-anim {
+	transform: translateY(10%);
+	opacity: 0;
+	transition: all 1s;
+	&._watcher-view {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.card-anim {
+	transform: translateY(10%);
+	opacity: 0;
+	transition: all 1s;
+	@media (max-width: $mobile) {
+		transform: translateY(5%);
+	}
+	&._watcher-view {
+		transform: translateY(0);
+		opacity: 1;
+
+		&:nth-child(1) {
+			transition-delay: 0.2s;
+		}
+		&:nth-child(2) {
+			transition-delay: 0.4s;
+			@media (max-width: $mobile) {
+				transition-delay: 0.2s;
+			}
+		}
+		&:nth-child(3) {
+			transition-delay: 0.6s;
+			@media (max-width: $mobile) {
+				transition-delay: 0.2s;
+			}
+		}
+	}
+	&.item-pricing_premium {
+		@media (min-width: $mobile) {
+			transform: translateY(10%);
+			&._watcher-view {
+				transform: translateY(toRem(-20));
+			}
+		}
+	}
+}
+
+.heading-anim {
+	transform: translateY(5%);
+	opacity: 0;
+	transition: all 1s;
+	&._watcher-view {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.section-anim {
+	transform: translateY(4%);
+	opacity: 0;
+	transition:
+		transform 1s,
+		opacity 1.5s;
+	&._watcher-view {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.two-column__item {
+	.anim-side {
+		@media (min-width: $tablet) {
+			opacity: 0;
+			transition:
+				transform 1s,
+				opacity 1.5s;
+			&:nth-child(1) {
+				transform: translateX(var(--translate, -5%));
+			}
+			&:nth-child(2) {
+				transform: translateX(var(--translate, 5%));
+			}
+		}
+	}
+
+	&._watcher-view {
+		@media (min-width: $tablet) {
+			.anim-side {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+	}
+
+	&:nth-child(even) {
+		--translate: 5%;
+
+		.anim-side:nth-child(2) {
+			--translate: -5%;
+		}
+	}
+
+	&:nth-child(odd) {
+		--translate: -5%;
+		.anim-side:nth-child(2) {
+			--translate: 5%;
+		}
+	}
+
+	@media (max-width: $tablet) {
+		transform: translateY(4%);
+		opacity: 0;
+		transition:
+			transform 1s,
+			opacity 1.5s;
+		&._watcher-view {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+}

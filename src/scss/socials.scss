@@ -1,0 +1,35 @@
+.socials {
+	display: flex;
+	gap: toRem(10) toRem(20);
+	flex-wrap: wrap;
+	a {
+		flex: 0 0 toRem(24);
+		inline-size: toRem(24);
+		block-size: toRem(24);
+		transition: opacity 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+		svg {
+			flex: 0 0 toRem(24);
+			inline-size: toRem(24);
+			block-size: toRem(24);
+			fill: white;
+			path {
+				fill: white;
+			}
+		}
+	}
+	&_dark {
+		a {
+			svg {
+				fill: var(--text-primary);
+				path {
+					fill: var(--text-primary) !important;
+				}
+			}
+		}
+	}
+}

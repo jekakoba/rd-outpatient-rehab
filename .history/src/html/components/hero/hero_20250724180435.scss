@@ -1,0 +1,48 @@
+.hero {
+	// .hero__container
+
+	&__container {
+	}
+
+	// .hero__body
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: toRem(100);
+	}
+
+	.content {
+		gap: toRem(20);
+		// .content_left
+	}
+
+	.title {
+		// .title_main
+
+		&_main {
+		}
+	}
+
+	.label-text {
+		display: flex;
+		gap: toRem(8);
+		span {
+			font-weight: 600;
+			color: white;
+			@media (max-width: $mobileSmall) {
+				font-size: toRem(12);
+			}
+		}
+	}
+	.labe-icon {
+		flex: 0 0 toRem(20);
+		inline-size: toRem(20);
+		block-size: toRem(20);
+		img {
+			inline-size: 100%;
+			block-size: 100%;
+			object-fit: contain;
+		}
+	}
+}

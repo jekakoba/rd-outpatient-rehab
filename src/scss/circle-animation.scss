@@ -1,0 +1,96 @@
+.circle-animation {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	max-width: toRem(812);
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	padding-block: toRem(45);
+	@media (max-width: $mobile) {
+		overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__body {
+		position: relative;
+		padding-bottom: 100%;
+		min-width: toRem(500);
+		min-height: toRem(513);
+		width: 100%;
+		justify-self: center;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+			height: 100%;
+			background: url("@icss/decors/circles.svg") center / contain no-repeat;
+			animation: circle-rotate var(--speed-anim-cirlce) infinite linear;
+		}
+	}
+
+	&__item {
+		position: absolute;
+		width: 14.039408867%;
+		height: 13.682%;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--white-color);
+		box-shadow: 0 0 toRem(24) 0 rgba(0, 0, 0, 0.1);
+		z-index: 2;
+		// @media (max-width: $mobile) {
+		// 	width: percent(72, 114);
+		// 	height: percent(72, 114);
+		// }
+
+		img {
+			width: percent(55, 114);
+			height: percent(55, 114);
+			object-fit: contain;
+		}
+		&:nth-child(1) {
+			top: toRem(132.427);
+			left: 2%;
+			@media (max-width: $mobile) {
+				left: 16%;
+				top: 8%;
+			}
+			@media (max-width: toEm(374)) {
+				left: 22%;
+				top: 5%;
+			}
+		}
+		&:nth-child(2) {
+			top: toRem(132.427);
+			right: 3%;
+			@media (max-width: $mobile) {
+				right: 16%;
+				top: 8%;
+			}
+			@media (max-width: toEm(374)) {
+				right: 22%;
+				top: 5%;
+			}
+		}
+		&:nth-child(3) {
+			bottom: -2.5%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+@keyframes circle-rotate {
+	0% {
+		transform: translateX(-50%) rotate(0deg);
+	}
+	100% {
+		transform: translateX(-50%) rotate(360deg);
+	}
+}

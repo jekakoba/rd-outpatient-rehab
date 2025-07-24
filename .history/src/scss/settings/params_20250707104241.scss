@@ -1,0 +1,30 @@
+@use "sass:math";
+
+// ============ Params ========================================================
+
+$minWidth: 320;
+$maxWidth: 1440;
+$maxWidthContainer: 1244; // (0 = no restriction)
+$containerPadding: 48; // (32 = 16px left and right, 0 = no retreat)
+
+// ============ Container =====================================================
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+[class*="__container"] {
+	@if ($maxWidthContainer>0) {
+		max-width: toRem($containerWidth);
+		margin: 0 auto;
+		width: 100%;
+	}
+	@if ($containerPadding>0) {
+		@if ($maxWidthContainer>0) {
+			padding: 0 toRem(math.div($containerPadding, 2));
+		} @else {
+			@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+			@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+		}
+	}
+}
+[class*="__container_wide"] {
+	max-width: toRem(1408) !important;
+}

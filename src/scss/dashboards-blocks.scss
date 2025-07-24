@@ -1,0 +1,148 @@
+.leaderboard {
+	// .leaderboard__container
+
+	&__container {
+		// .leaderboard__container_xs
+
+		&_xs {
+		}
+	}
+}
+.block-transparent {
+	position: relative;
+	z-index: 2;
+	padding: toRem(24);
+	border-radius: toRem(6);
+	background-color: var(--bg-light-dark-gradient-200);
+	color: var(--text-white);
+	&_spoiler {
+		display: grid;
+		gap: toRem(30);
+	}
+	&_bg-hidden {
+		background-color: transparent;
+	}
+	&_hidden-space {
+		padding: 0;
+	}
+	&_small {
+		padding: toRem(16);
+	}
+	&_big {
+		padding: toRem(30);
+	}
+	@media (max-width: $mobile) {
+		padding: toRem(16);
+	}
+}
+.dashboard {
+	&__header {
+		&:not(:last-child) {
+			margin-block-end: toRem(20);
+		}
+	}
+
+	// .dashboard__title
+
+	&__title {
+		font-size: toRem(20);
+		font-weight: 800;
+		letter-spacing: toEm(-1, 20);
+	}
+
+	// .dashboard__table
+
+	&__table {
+		margin-inline: toRem(-24);
+		@media (max-width: $mobile) {
+			margin-inline: toRem(-16);
+		}
+		// padding-inline: toRem(24);
+	}
+
+	// .dashboard__row
+
+	&__row {
+		display: grid;
+		grid-template-columns: toRem(80) 1fr auto;
+		align-items: center;
+		padding-block: toRem(11.5);
+		padding-inline: toRem(24);
+		&:not(:last-child) {
+			border-bottom: toRem(1) solid var(--border-line);
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(30);
+			grid-template-columns: toRem(30) 1fr auto;
+		}
+		&_referrals {
+			grid-template-columns: toRem(103) 1fr auto;
+			gap: toRem(33);
+			@media (max-width: $mobile) {
+				grid-template-columns: toRem(73) 1fr auto;
+				gap: toRem(30);
+			}
+		}
+	}
+
+	// .dashboard__col
+
+	// .dashboard__col
+
+	&__col {
+		// .dashboard__col_decor
+
+		&_decor {
+		}
+
+		// .dashboard__col_title
+
+		&_title,
+		&_subtitle,
+		&_decor {
+			font-size: toRem(12);
+			font-weight: 600;
+			@media (max-width: toEm(374)) {
+				font-size: toRem(8);
+			}
+		}
+
+		// .dashboard__col_subtitle
+
+		&_subtitle {
+		}
+
+		// .dashboard__col_number
+
+		&_number,
+		&_name,
+		&_value {
+			font-size: toRem(14);
+			@media (max-width: toEm(374)) {
+				font-size: toRem(10);
+			}
+		}
+
+		// .dashboard__col_name
+
+		&_name {
+			text-transform: none;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width: 100%;
+		}
+
+		// .dashboard__col_value
+
+		&_value {
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			gap: toRem(2);
+			.icon {
+				top: 0;
+			}
+		}
+	}
+}

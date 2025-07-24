@@ -1,0 +1,40 @@
+.our-team-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: toRem(24);
+	inline-size: 100%;
+	@media (max-width: $tablet) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: toEm(640)) {
+		grid-template-columns: auto;
+	}
+}
+
+.item-our-team {
+	// .item-our-team__image
+
+	&__image {
+		padding-block-end: 137.245%;
+		&:not(:last-child) {
+			margin-block-end: toRem(24);
+		}
+	}
+
+	// .item-our-team__title
+
+	&__title {
+		font-size: toRem(24);
+		font-weight: 800;
+		&:not(:last-child) {
+			margin-block-end: toRem(12);
+		}
+	}
+
+	// .item-our-team__text
+
+	&__text {
+		font-size: toRem(16);
+		font-weight: 500;
+	}
+}

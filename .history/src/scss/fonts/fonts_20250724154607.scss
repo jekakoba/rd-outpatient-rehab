@@ -1,0 +1,43 @@
+/**
+ * icons font face
+ */
+@font-face {
+	font-family: "icons";
+	font-display: swap;
+	src: url("/src/assets/fonts/icons.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+/**
+ * Satoshi font face
+ */
+@font-face {
+	font-family: "Satoshi";
+	font-display: swap;
+	src: url("/src/assets/fonts/Satoshi-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+/**
+ * Satoshi font face
+ */
+@font-face {
+	font-family: "Satoshi";
+	font-display: swap;
+	src: url("/src/assets/fonts/Satoshi-Medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+
+/**
+ * Satoshi font face
+ */
+@font-face {
+	font-family: "Satoshi";
+	font-display: swap;
+	src: url("/src/assets/fonts/Satoshi-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}

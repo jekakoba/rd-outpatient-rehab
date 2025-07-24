@@ -1,0 +1,62 @@
+.content-layout {
+	@include adaptiveValue("padding-top", 167, 100, 0, $containerWidth, 767.98);
+	@include adaptiveValue("padding-bottom", 137, 100, 0, $containerWidth, 767.98);
+
+	&_top {
+		// position: relative;
+		// z-index: 10 !important;
+	}
+	// overflow: hidden;
+	// position: relative;
+	// z-index: 3;
+	@media (max-width: $mobile) {
+	}
+	&__aside > *:not(:last-child) {
+		margin-block-end: toRem(10);
+	}
+	// .our-team__container
+
+	&__container {
+		display: flex;
+		position: relative;
+		z-index: 10;
+		@include adaptiveValue("gap", 100, 20, 0, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			gap: toRem(60);
+		}
+	}
+
+	&__body {
+		width: 100%;
+	}
+	&_white {
+		color: var(--text-white);
+	}
+	&_small-gap {
+		@media (max-width: $mobile) {
+			padding-block: toRem(80);
+		}
+		.content-layout__container {
+			gap: toRem(60);
+		}
+	}
+	&_big-padding {
+		@include adaptiveValue("padding-block-start", 231, 200, 0, $containerWidth, 767.98);
+		@include adaptiveValue("padding-block-end", 231, 200, 0, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			padding-block-start: toRem(150);
+			padding-block-end: toRem(120);
+		}
+		.content-layout__aside {
+			@media (max-width: $mobile) {
+				padding-inline-start: toRem(84);
+			}
+		}
+	}
+	&_faq {
+		@media (max-width: $mobile) {
+			padding-block-start: toRem(10);
+		}
+	}
+}
