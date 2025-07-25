@@ -3,10 +3,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/src/assets/fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/src/assets/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/src/assets/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./assets/fonts/Satoshi-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./assets/fonts/Satoshi-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./assets/fonts/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <meta name="description" content="Flexible outpatient rehab in Richardson, TX that works with your schedule and your insurance.">
+    <script>
+      let locationObj = [{
+          lat: 50.510546228936136,
+          lng: 30.25336058246422,
+          title: "Синергія Сіті",
+          url: "https://www.google.com/",
+          image: "https://moya-planeta.ru/upload/images/l/eb/e2/ebe21cb5a55a808b104f3d51c3ff96284bae5182.jpg",
+          text: "від 1300 $/м2",
+        },
+        {
+          lat: 50.51508698873544,
+          lng: 30.234663942327114,
+          title: "Таунхауси CENTER",
+          url: "https://www.google.com/",
+          image: "https://moya-planeta.ru/upload/images/l/eb/e2/ebe21cb5a55a808b104f3d51c3ff96284bae5182.jpg",
+          text: "від 1300 $/м2",
+        },
+        {
+          lat: 50.51712979442156,
+          lng: 30.206388271163554,
+          title: "Дуплекси Green Woods",
+          url: "https://www.google.com/",
+          image: "https://moya-planeta.ru/upload/images/l/eb/e2/ebe21cb5a55a808b104f3d51c3ff96284bae5182.jpg",
+          text: "від 1300 $/м2",
+        },
+        {
+          lat: 50.51622361883153,
+          lng: 30.226644542327115,
+          title: "Таунхауси B-Hills",
+          url: "https://www.google.com/",
+          image: "https://moya-planeta.ru/upload/images/l/eb/e2/ebe21cb5a55a808b104f3d51c3ff96284bae5182.jpg",
+          text: "від 1000 $/м2",
+        },
+        {
+          lat: 50.50396653922818,
+          lng: 30.249594703710198,
+          title: "Таунхаус „Laker str.“",
+          url: "https://www.google.com/",
+          image: "https://moya-planeta.ru/upload/images/l/eb/e2/ebe21cb5a55a808b104f3d51c3ff96284bae5182.jpg",
+          text: "від 1300 $/м2",
+        },
+        {
+          lat: 50.52350150330264,
+          lng: 30.222094739206938,
+          title: "Таунхауси на Степанівській",
+          url: "https://www.google.com/",
+          image: "https://moya-planeta.ru/upload/images/l/eb/e2/ebe21cb5a55a808b104f3d51c3ff96284bae5182.jpg",
+          text: "від 1300 $/м2",
+        },
+        {
+          lat: 50.517377218726054,
+          lng: 30.203953271163556,
+          title: "Дуплекси на Гоголя",
+          url: "https://www.google.com/",
+          image: "https://moya-planeta.ru/upload/images/l/eb/e2/ebe21cb5a55a808b104f3d51c3ff96284bae5182.jpg",
+          text: "від 1300 $/м2",
+        },
+        {
+          lat: 50.520282,
+          lng: 30.223003,
+          title: "Таунхаус на Виговського",
+          url: "https://www.google.com/",
+          image: "https://moya-planeta.ru/upload/images/l/eb/e2/ebe21cb5a55a808b104f3d51c3ff96284bae5182.jpg",
+          text: "від 1300 $/м2",
+        },
+      ];
+    </script>
     <script type="module" crossorigin="" src="./assets/js/index.js"></script>
     <link rel="stylesheet" crossorigin="" href="./assets/css/style.css">
   </head>
@@ -45,7 +115,7 @@
                       </ul>
                     </nav>
                   </div>
-                  <img class="logo-text" src="./assets/img/logo-text-dark.svg" fetchpriority="high" width="343" height="36" alt="RD Outpatient Rehab">
+                  <img class="logo-text" src="./assets/img/logo-text-dark.svg" width="343" height="36" alt="RD Outpatient Rehab">
                 </div>
               </div>
               <div class="header__actions">
@@ -134,7 +204,7 @@
           <div class="can-help-you__container">
             <div class="can-help-you__body">
               <div class="image ibg">
-                <img src="./assets/img/image02.webp" loading="lazy" width="620" height="460" alt="A young girl">
+                <img src="./assets/img/image02.webp" width="620" height="460" alt="A young girl">
               </div>
               <divc class="can-help-you__content">
                 <div class="content content_left">
@@ -217,7 +287,7 @@
                 <div class="block-silder__wrapper swiper-wrapper">
                   <div class="card-item swiper-slide">
                     <div class="image ibg">
-                      <img src="./assets/img/cards/image01.webp" loading="lazy" width="362" height="232" alt="A person conducting physical therapy, assisting another individual with their hands in a bright room with a large window.">
+                      <img src="./assets/img/cards/image01.webp" width="362" height="232" alt="A person conducting physical therapy, assisting another individual with their hands in a bright room with a large window.">
                     </div>
                     <div class="card-item__content">
                       <div class="card-item__header">
@@ -236,7 +306,7 @@
                   </div>
                   <div class="card-item swiper-slide">
                     <div class="image ibg">
-                      <img src="./assets/img/cards/image02.webp" loading="lazy" width="362" height="232" alt="A man sitting on a couch in a therapy room, deep in thought, with a therapist holding a notepad nearby.">
+                      <img src="./assets/img/cards/image02.webp" width="362" height="232" alt="A man sitting on a couch in a therapy room, deep in thought, with a therapist holding a notepad nearby.">
                     </div>
                     <div class="card-item__content">
                       <div class="card-item__header">
@@ -254,7 +324,7 @@
                   </div>
                   <div class="card-item swiper-slide">
                     <div class="image ibg">
-                      <img src="./assets/img/cards/image03.webp" loading="lazy" width="362" height="232" alt="A woman sitting in a chair in a cozy room with a lamp, talking to another person.">
+                      <img src="./assets/img/cards/image03.webp" width="362" height="232" alt="A woman sitting in a chair in a cozy room with a lamp, talking to another person.">
                     </div>
                     <div class="card-item__content">
                       <div class="card-item__header">
@@ -275,7 +345,7 @@
                   </div>
                   <div class="card-item swiper-slide">
                     <div class="image ibg">
-                      <img src="./assets/img/cards/image04.webp" loading="lazy" width="362" height="232" alt="A woman in a business suit sitting at a table, talking to a person in uniform.">
+                      <img src="./assets/img/cards/image04.webp" width="362" height="232" alt="A woman in a business suit sitting at a table, talking to a person in uniform.">
                     </div>
                     <div class="card-item__content">
                       <div class="card-item__header">
@@ -391,7 +461,7 @@
                   <div class="card-review__header">
                     <div class="card-review__profile profile-review">
                       <div class="profile-review__avatar">
-                        <img src="./assets/img/reviews/avatar.webp" loading="lazy" width="48" height="48" alt="Taylor G">
+                        <img src="./assets/img/reviews/avatar.webp" width="48" height="48" alt="Taylor G">
                       </div>
                       <div class="profile-review__body">
                         <span class="profile-review__name">Taylor G.</span>
@@ -637,7 +707,7 @@
                   </li>
                 </ul>
               </nav>
-              <img class="logo-text" src="./assets/img/logo-text.svg" fetchpriority="high" width="1238" height="130" alt="RD Outpatient Rehab">
+              <img class="logo-text" src="./assets/img/logo-text.svg" width="1238" height="130" alt="RD Outpatient Rehab">
               <p class="footer__copy">2025 © 2025 RD Outpatient Rehab | All rights reserved</p>
             </div>
           </div>
