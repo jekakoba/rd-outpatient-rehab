@@ -1,0 +1,149 @@
+.spoiler {
+	&__panel {
+		.init & {
+			cursor: pointer;
+			user-select: none;
+		}
+	}
+
+	&__content {
+		transition: all 0s;
+		overflow: hidden;
+
+		display: none;
+		.init-show &,
+		.init-hidden & {
+			display: block;
+		}
+
+		.init & {
+			display: none;
+		}
+		.init.show & {
+			display: block;
+		}
+	}
+}
+
+//  init close
+.spoiler.init {
+	.spoiler__content {
+		& > * {
+			transition: opacity 0.5s;
+			opacity: 0;
+		}
+	}
+}
+// init open
+.spoiler.init.spoiler-open {
+	.spoiler__content {
+		& > * {
+			opacity: 1;
+		}
+	}
+}
+
+// =================================
+
+.spoilers {
+	display: grid;
+	gap: toRem(24);
+	@media (min-width: $mobile) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.spoiler {
+	padding: toRem(24);
+	background-color: var(--light-color-300);
+	border-radius: var(--main-border-radius);
+	overflow: hidden;
+	border: toRem(1) solid rgba(0, 0, 0, 0.05);
+	@media (max-width: $mobileSmall) {
+		padding: toRem(16);
+	}
+	&__panel {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		justify-content: space-between;
+		transition: padding 0.3s;
+		inline-size: 100%;
+		@media (any-hover: hover) {
+			&:hover {
+				.spoiler__text {
+					color: var(--brand-color);
+				}
+			}
+		}
+		.spoiler-open & {
+			padding-block-end: toRem(5);
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(4);
+		}
+	}
+
+	&__icon {
+		flex: 0 0 toRem(44);
+		width: toRem(44);
+		height: toRem(44);
+		position: relative;
+		transition: all 0.3s;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: toRem(10);
+		background-color: white;
+		box-shadow: 0 0 toRem(12) 0 rgba(0, 0, 0, 0.05);
+		svg {
+			transition: transform 0.3s;
+			will-change: transform;
+			width: toRem(12);
+			height: toRem(12);
+			transform: rotate(45deg);
+			@media (max-width: $mobileSmall) {
+				width: toRem(12);
+				height: toRem(12);
+			}
+		}
+		.spoiler-open & {
+			svg {
+				transform: rotate(0deg);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 toRem(32);
+			width: toRem(32);
+			height: toRem(32);
+		}
+	}
+
+	&__text {
+		transition: transform 0.3s;
+		text-wrap: balance;
+		transition: color 0.3s;
+		font-size: toRem(20);
+		line-height: 1.1;
+		color: black;
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(16);
+		}
+	}
+
+	&__body {
+		padding-inline-end: toRem(60);
+		color: rgba(0, 0, 0, 0.6);
+		@media (min-width: $mobileSmall) {
+			font-size: toRem(16);
+		}
+		@media (max-width: $mobileSmall) {
+			// padding-inline-end: toRem(44);
+		}
+		p {
+			&:not(:last-child) {
+				margin-block-end: toRem(10);
+			}
+		}
+	}
+}

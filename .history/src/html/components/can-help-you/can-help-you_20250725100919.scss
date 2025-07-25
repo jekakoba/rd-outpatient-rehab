@@ -1,0 +1,15 @@
+.can-help-you {
+	// .can-help-you__container
+
+	&__container {
+	}
+
+	// .can-help-you__body
+
+	&__body {
+		display: flex;
+		.image {
+			padding-bottom: 100%;
+		}
+	}
+}

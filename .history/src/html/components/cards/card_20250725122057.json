@@ -1,0 +1,15 @@
+[
+  {
+    "number": "01",
+    "title": "Partial Hospitalization Program (PHP)",
+    "text": "For those who need structured, daily clinical care without inpatient stay",
+    "image": "/src/assets/img/cards/image01.jpg",
+    "tags": [
+      "5–6 days/week",
+      "Psychiatric support",
+      "group therapy",
+      "Live at home",
+      "Insurance typically covers"
+    ]
+  }
+]

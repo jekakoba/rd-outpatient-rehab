@@ -1,0 +1,27 @@
+.block-silder {
+	// .block-silder__container
+
+	&__container {
+	}
+
+	// .block-silder__body
+
+	&__body {
+	}
+
+	// .block-silder__header
+
+	&__header {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		gap: toRem(20);
+	}
+	.content {
+		max-inline-size: toRem(480);
+		// .content_left
+
+		&_left {
+		}
+	}
+}

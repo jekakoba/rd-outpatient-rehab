@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="@c/UI/button/button.scss">
+<a class="{{class}}" href="#">
+	<i>
+		<if condition="name === 'heart'">
+			<img src="@i/icons/heart.svg" width="20" height="20" alt="heart">
+		</if>
+		<elseif condition="name === 'smile'">
+			<img src="@i/icons/smile.svg" width="20" height="20" alt="smile">
+		</elseif>
+		<elseif condition="name === 'smile-2'">
+			<img src="@i/icons/smile-2.svg" width="20" height="20" alt="heart">
+		</elseif>
+		<elseif condition="name === 'medicine'">
+			<img src="@i/icons/medicine.svg" width="20" height="20" alt="medicine">
+		</elseif>
+		<elseif condition="name === 'glass'">
+			<img src="@i/icons/glass.svg" width="20" height="20" alt="glass">
+		</elseif>
+	</i>
+	<span>{{text}}</span>
+</a>

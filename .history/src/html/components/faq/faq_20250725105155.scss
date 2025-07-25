@@ -1,0 +1,9 @@
+.faq {
+	&__body {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 87, 40);
+	}
+	.content {
+	}
+}

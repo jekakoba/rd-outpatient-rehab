@@ -1,0 +1,33 @@
+.can-help-you {
+	// .can-help-you__container
+
+	&__container {
+	}
+
+	// .can-help-you__body
+
+	&__body {
+		display: flex;
+		@media (min-width: $mobile) {
+			align-items: center;
+			@include adaptiveValue("gap", 60, 30, 0, $containerWidth, 767.98);
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column-reverse;
+			gap: toRem(40);
+		}
+		.image {
+			flex: 0 0 50.08%;
+			padding-bottom: 37.157%;
+		}
+		.content {
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(32);
+		flex: 1 1 auto;
+	}
+}

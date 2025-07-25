@@ -1,0 +1,41 @@
+.block {
+	// .block__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(56);
+	}
+
+	// .block__body
+
+	&__body {
+	}
+}
+
+.steps {
+	// .steps__item
+
+	&__item {
+	}
+
+	// .steps__number
+
+	&__number {
+	}
+
+	// .steps__body
+
+	&__body {
+	}
+
+	// .steps__title
+
+	&__title {
+	}
+
+	// .steps__text
+
+	&__text {
+	}
+}

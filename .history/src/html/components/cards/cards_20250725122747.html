@@ -1,0 +1,11 @@
+<!-- ====== Imports ====== -->
+<link rel='stylesheet' href='@c/cards/cards.scss' />
+
+
+<div class="cards">
+	<fetch url="@c/cards/card.json">
+		<each loop="item, index in response">
+			<include src="@c/cards/card-item.html"></include>
+		</each>
+	</fetch>
+</div>

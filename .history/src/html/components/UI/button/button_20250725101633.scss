@@ -1,0 +1,73 @@
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--brand-color);
+	border-radius: toRem(30);
+	padding-block: toRem(7);
+	padding-inline: toRem(20);
+	transition: background-color 0.3s;
+	min-block-size: toRem(56);
+	span {
+		letter-spacing: toRem(-0.42);
+		color: white;
+		font-weight: 500;
+		text-align: center;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--hover-btn-color);
+		}
+	}
+	&_small {
+		min-block-size: toRem(40);
+	}
+	&_decor {
+		display: flex;
+		align-items: center;
+		gap: toRem(8);
+		padding-inline-start: toRem(10);
+		padding-inline-end: toRem(20);
+		i {
+			flex: 0 0 toRem(32);
+			inline-size: toRem(32);
+			block-size: toRem(32);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: white;
+			transition: transform 0.3s;
+			@media (max-width: $mobileSmall) {
+				flex: 0 0 toRem(28);
+				inline-size: toRem(28);
+				block-size: toRem(28);
+			}
+			img {
+				width: toRem(16);
+				height: toRem(16);
+				object-fit: contain;
+				@media (max-width: $mobileSmall) {
+					width: toRem(12);
+					height: toRem(12);
+				}
+			}
+		}
+	}
+	&_decor-label {
+		display: none;
+	}
+	&_bold-desktop {
+		@media (min-width: $mobile) {
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		min-block-size: toRem(48);
+		span {
+			font-size: toRem(14);
+		}
+	}
+}

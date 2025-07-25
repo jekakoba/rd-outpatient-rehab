@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="@c/UI/spoiler/spoiler.scss">
+
+<div class="spoiler" data-spoiler data-spoiler-group="one">
+	<button class="spoiler__panel" type="button" data-spoiler-title>
+		<span class="spoiler__text">
+			<span data-text="{{spoiler.question}}">{{spoiler.question}}</span>
+		</span>
+		<i class="spoiler__icon">
+			<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.9657 7.15958L13.4901 0.651841L6.98232 3.17621L0.472817 0.650074L2.99896 7.15958L0.472228 13.6697L6.98232 11.1429L13.4918 13.6691L10.9657 7.15958Z" fill="#11D3AC" />
+			</svg>
+		</i>
+	</button>
+	<div class="spoiler__content" data-spoiler-content>
+		<div class="spoiler__body">
+			<p>{{spoiler.answer}}</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+.block {
+	// .block__container
+
+	&__container {
+	}
+
+	// .block__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(56);
+	}
+}
+
+.steps {
+	max-inline-size: toRem(804);
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: toRem(32) toRem(44);
+	// .steps__item
+
+	&__item {
+	}
+
+	// .steps__number
+
+	&__number {
+	}
+
+	// .steps__body
+
+	&__body {
+	}
+
+	// .steps__title
+
+	&__title {
+	}
+
+	// .steps__text
+
+	&__text {
+	}
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "number": "01",
+    "title": "Partial Hospitalization Program (PHP)",
+    "text": "For those who need structured, daily clinical care without inpatient stay",
+    "image": "/src/assets/img/cards/image01.jpg",
+    "tags": [
+      "5–6 days/week",
+      "Psychiatric support",
+      "group therapy",
+      "Live at home",
+      "Insurance typically covers"
+    ]
+  },
+  {
+    "number": "02",
+    "title": "Intensive Outpatient Program (IOP)",
+    "text": "Clients balancing recovery with work, school, or home life",
+    "image": "/src/assets/img/cards/image02.jpg",
+    "tags": [
+      "Morning or evening sessions",
+      "3–5 days/week",
+      "Small group therapy",
+      "Ideal for transition phase"
+    ]
+  },
+  {
+    "number": "03",
+    "title": "Dual Diagnosis Program",
+    "text": "For: Co-occurring mental health + substance use issues. Addiction + mental health treatment",
+    "image": "/src/assets/img/cards/image3.jpg",
+    "tags": [
+      "Trauma",
+      "Psychiatric support",
+      "group therapy",
+      "Live at home",
+      "Insurance typically covers"
+    ]
+  }
+]

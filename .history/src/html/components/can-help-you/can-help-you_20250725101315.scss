@@ -1,0 +1,24 @@
+.can-help-you {
+	// .can-help-you__container
+
+	&__container {
+	}
+
+	// .can-help-you__body
+
+	&__body {
+		display: flex;
+		gap: toRem(60);
+		.image {
+			flex: 0 0 50.08%;
+			padding-bottom: 37.157%;
+		}
+		.content {
+		}
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		display: none;
+	}
+}

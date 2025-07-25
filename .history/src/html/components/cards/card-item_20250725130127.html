@@ -1,0 +1,17 @@
+<div class="card-item swiper-slide">
+	<div class="image ibg">
+		<img src="{{{{item.image}}}}" alt="">
+	</div>
+	<div class="card-item__content">
+		<div class="card-item__header">
+			<div class="cards-item__number">{{item.number}}</div>
+			<h3 class="cards-item__number">{{item.title}}</h3>
+		</div>
+		<p class="card-item__text">{{item.text}}</p>
+		<each loop="item, index in item.tags">
+			<div class="card-item__tags">
+				{{item}}
+			</div>
+		</each>
+	</div>
+</div>

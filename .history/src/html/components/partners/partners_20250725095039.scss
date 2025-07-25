@@ -1,0 +1,38 @@
+.partners {
+	// .partners__container
+
+	&__container {
+	}
+
+	// .partners__body
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: toRem(16);
+		max-inline-size: toRem(1016);
+		margin-inline: auto;
+	}
+
+	// .partners__title
+
+	&__title {
+	}
+
+	// .partners__list
+
+	&__list {
+	}
+
+	// .partners__item
+
+	&__item {
+	}
+
+	// .partners__text
+
+	&__text {
+	}
+}

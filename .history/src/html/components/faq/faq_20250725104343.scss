@@ -1,0 +1,9 @@
+.faq {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(28);
+	}
+	.content {
+	}
+}

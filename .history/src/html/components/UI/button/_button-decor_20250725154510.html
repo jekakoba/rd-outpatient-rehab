@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="@c/UI/button/button.scss">
+<a class="{{class}}" href="#">
+	<i>
+		<if condition="name === 'heart'">
+			<img src="@i/icons/heart.svg" width="20" height="20" alt="heart">
+		</if>
+		<elseif condition="name === 'message'">
+			<img src="@i/icons/message.svg" width="20" height="20" alt="message">
+		</elseif>
+	</i>
+	<span>{{text}}</span>
+</a>

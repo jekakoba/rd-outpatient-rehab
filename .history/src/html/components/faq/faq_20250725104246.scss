@@ -1,0 +1,10 @@
+.faq {
+	padding-block: toRem(100);
+	@media (max-width: $mobile) {
+		padding-block: toRem(60);
+	}
+	&__container {
+	}
+	.content {
+	}
+}

@@ -1,0 +1,29 @@
+.faq {
+	padding-block: toRem(100);
+	@media (max-width: $mobile) {
+		padding-block: toRem(60);
+	}
+	&__container {
+		display: grid;
+		align-items: start;
+		gap: toRem(20);
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(40);
+		}
+	}
+	.content {
+		.button {
+			margin-block-start: toRem(20);
+		}
+		.title {
+			@media (max-width: $mobile) {
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+}

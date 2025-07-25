@@ -1,0 +1,23 @@
+<link rel='stylesheet' href='@c/faq/faq.scss' />
+
+
+<section class="faq _space-section">
+	<div id="faq" class="faq__container">
+		<div class="content content_center">
+			<div class="label-text">
+				<span>What we treat</span>
+			</div>
+			<h2 class="title">How we can help you</h2>
+			<p>We specialize in treating addiction and co-occurring mental health conditions through flexible, outpatient programs. Whether you need intensive daily support or a part-time structure, our team will guide you to the right level
+				of
+				care — without disrupting your life, work, or family.</p>
+		</div>
+		<div class="spoilers">
+			<fetch url="@c/UI/spoiler/faq.json">
+				<each loop="spoiler, index in response">
+					<include src="@c/UI/spoiler/_spoiler-faq.html"></include>
+				</each>
+			</fetch>
+		</div>
+	</div>
+</section>

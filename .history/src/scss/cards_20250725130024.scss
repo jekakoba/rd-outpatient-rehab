@@ -1,0 +1,32 @@
+.card-item {
+	border-radius: var(--main-border-radius);
+	border: toRem(1) solid rgba(0, 53, 104, 0.1);
+	background-color: #fff;
+	box-shadow: 0 0 toRem(12) 0 rgba(0, 0, 0, 0.05);
+	// .cards-item__content
+
+	&__content {
+	}
+
+	// .cards-item__header
+
+	&__header {
+	}
+
+	// .cards-item__number
+
+	&__number {
+	}
+
+	// .cards-item__text
+
+	&__text {
+	}
+
+	// .cards-item__tags
+
+	&__tags {
+	}
+}
+.image {
+}
