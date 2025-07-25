@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import Marquee from './marque.js';
+import Marquee from 'marquee.js'
 import { Navigation } from 'swiper/modules';
 
 function initSliders() {

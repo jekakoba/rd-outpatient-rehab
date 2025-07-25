@@ -218,193 +218,178 @@ class DynamicAdapt {
 }
 const da = new DynamicAdapt("max");
 da.init();
-function marquee() {
-  const $marqueeArray = document.querySelectorAll("[data-marquee]");
-  const CLASS_NAMES = {
-    wrapper: "marquee-wrapper",
-    inner: "marquee-inner",
-    item: "marquee-item"
-  };
-  if (!$marqueeArray.length) return;
-  const {
-    head
-  } = document;
-  const debounce2 = (delay, fn) => {
+class Marquee {
+  constructor({ parent = "[data-marquee]" } = {}) {
+    this.selector = parent;
+    this.instances = [];
+    this.resizeHandler = null;
+    this.CLASS_NAMES = {
+      wrapper: "marquee-wrapper",
+      inner: "marquee-inner",
+      item: "marquee-item",
+      clone: "marquee-clone"
+    };
+    this.init();
+  }
+  debounce(delay, fn) {
     let timerId;
     return (...args) => {
-      if (timerId) {
-        clearTimeout(timerId);
-      }
+      clearTimeout(timerId);
       timerId = setTimeout(() => {
         fn(...args);
         timerId = null;
       }, delay);
     };
-  };
-  const onWindowResize = (cb) => {
-    if (!cb && !isFunction(cb)) return;
-    const handleResize = () => {
-      cb();
-    };
-    window.addEventListener("resize", debounce2(15, handleResize));
-    handleResize();
-  };
-  const buildMarquee = (marqueeNode) => {
-    if (!marqueeNode) return;
-    const $marquee = marqueeNode;
-    const $childElements = $marquee.children;
-    if (!$childElements.length) return;
-    $marquee.classList.add(CLASS_NAMES.wrapper);
-    Array.from($childElements).forEach(($childItem) => $childItem.classList.add(CLASS_NAMES.item));
-    const htmlStructure = `<div class="${CLASS_NAMES.inner}">${$marquee.innerHTML}</div>`;
-    $marquee.innerHTML = htmlStructure;
-  };
-  const getElSize = ($el, isVertical) => {
-    if (isVertical) return $el.getBoundingClientRect().height;
-    return $el.getBoundingClientRect().width;
-  };
-  $marqueeArray.forEach(($wrapper) => {
-    if (!$wrapper) return;
-    buildMarquee($wrapper);
-    const $marqueeInner = $wrapper.firstElementChild;
-    let cacheArray = [];
-    if (!$marqueeInner) return;
-    const dataMarqueeSpace = parseFloat($wrapper.getAttribute("data-marquee-space"));
-    const spaceBetween = !isNaN(dataMarqueeSpace) ? dataMarqueeSpace : 30;
-    const speed = parseFloat($wrapper.getAttribute("data-marquee-speed")) / 10 || 100;
-    const isMousePaused = $wrapper.hasAttribute("data-marquee-pause-mouse-enter");
-    const direction = $wrapper.getAttribute("data-marquee-direction");
-    const isVertical = direction === "bottom" || direction === "top";
-    const animName = `marqueeAnimation-${Math.floor(Math.random() * 1e7)}`;
-    let startPosition = parseFloat($wrapper.getAttribute("data-marquee-start")) || 0;
-    let sumSize = 0;
-    let firstScreenVisibleSize = 0;
-    let initialSizeElements = 0;
-    let initialElementsLength = $marqueeInner.children.length;
-    let index = 0;
-    let counterDublicateElements = 0;
-    const initEvents = () => {
-      if (startPosition) $marqueeInner.addEventListener("animationiteration", onChangeStartPosition);
-      if (!isMousePaused) return;
-      $marqueeInner.addEventListener("mouseenter", onChangePaused);
-      $marqueeInner.addEventListener("mouseleave", onChangePaused);
-    };
-    const onChangeStartPosition = () => {
-      console.log("work");
-      startPosition = 0;
-      $marqueeInner.removeEventListener("animationiteration", onChangeStartPosition);
-      onResize2();
-    };
-    const setBaseStyles = (firstScreenVisibleSize2) => {
-      let baseStyle = "display: flex; flex-wrap: nowrap;";
-      if (isVertical) {
-        baseStyle += `
-				flex-direction: column;
-			  position: relative;
-			  will-change: transform;`;
-        if (direction === "bottom") {
-          baseStyle += `top: -${firstScreenVisibleSize2}px;`;
-        }
-      } else {
-        baseStyle += `
-				position: relative;
-			  will-change: transform;`;
-        if (direction === "right") {
-          baseStyle += `left: -${firstScreenVisibleSize2}px;;`;
-        }
-      }
-      $marqueeInner.style.cssText = baseStyle;
-    };
-    const setdirectionAnim = (totalWidth) => {
-      switch (direction) {
-        case "right":
-        case "bottom":
-          return totalWidth;
-        default:
-          return -totalWidth;
-      }
-    };
-    const animation = () => {
-      const keyFrameCss = `@keyframes ${animName} {
-					  0% {
-						  transform: translate${isVertical ? "Y" : "X"}(${startPosition}%);
-					  }
-					  100% {
-						  transform: translate${isVertical ? "Y" : "X"}(${setdirectionAnim(firstScreenVisibleSize)}px);
-					  }
-				  }`;
-      const $style = document.createElement("style");
-      $style.classList.add(animName);
-      $style.innerHTML = keyFrameCss;
-      head.append($style);
-      $marqueeInner.style.animation = `${animName} ${(firstScreenVisibleSize + startPosition * firstScreenVisibleSize / 100) / speed}s infinite linear`;
-      console.log((firstScreenVisibleSize + startPosition * firstScreenVisibleSize / 100) / speed);
-    };
-    const addDublicateElements = () => {
-      sumSize = firstScreenVisibleSize = initialSizeElements = counterDublicateElements = index = 0;
-      const $parentNodeWidth = getElSize($wrapper, isVertical);
-      let $childrenEl = Array.from($marqueeInner.children);
-      if (!$childrenEl.length) return;
-      if (!cacheArray.length) {
-        cacheArray = $childrenEl.map(($item) => $item);
-      } else {
-        $childrenEl = [...cacheArray];
-      }
-      $marqueeInner.style.display = "flex";
-      if (isVertical) $marqueeInner.style.flexDirection = "column";
-      $marqueeInner.innerHTML = "";
-      $childrenEl.forEach(($item) => {
-        $marqueeInner.append($item);
-      });
-      $childrenEl.forEach(($item) => {
-        if (isVertical) {
-          $item.style.marginBottom = `${spaceBetween}px`;
+  }
+  onResize(callback) {
+    this.resizeHandler = this.debounce(15, callback);
+    window.addEventListener("resize", this.resizeHandler);
+    callback();
+  }
+  getSize($el, isVertical) {
+    return isVertical ? $el.getBoundingClientRect().height : $el.getBoundingClientRect().width;
+  }
+  buildStructure($marquee) {
+    const $children = $marquee.children;
+    if (!$children.length) return;
+    $marquee.classList.add(this.CLASS_NAMES.wrapper);
+    Array.from($children).forEach((el) => el.classList.add(this.CLASS_NAMES.item));
+    const html = `<div class="${this.CLASS_NAMES.inner}">${$marquee.innerHTML}</div>`;
+    $marquee.innerHTML = html;
+  }
+  init() {
+    const $marquees = document.querySelectorAll(this.selector);
+    if (!$marquees.length) return;
+    $marquees.forEach(($wrapper) => {
+      this.buildStructure($wrapper);
+      const $inner = $wrapper.firstElementChild;
+      const originalChildren = Array.from($inner.children).map((el) => el.cloneNode(true));
+      const space = parseFloat($wrapper.getAttribute("data-marquee-space")) || 30;
+      const speed = parseFloat($wrapper.getAttribute("data-marquee-speed")) / 10 || 100;
+      const pauseOnHover = $wrapper.hasAttribute("data-marquee-pause-mouse-enter");
+      const direction = $wrapper.getAttribute("data-marquee-direction");
+      const vertical = direction === "bottom" || direction === "top";
+      const animName = `marqueeAnimation-${Math.floor(Math.random() * 1e7)}`;
+      let start = parseFloat($wrapper.getAttribute("data-marquee-start")) || 0;
+      let sum = 0, visible = 0, base = 0;
+      let originalLength = $inner.children.length;
+      let index = 0, clones = 0;
+      const setBaseStyles = () => {
+        let style = "display:flex;flex-wrap:nowrap;";
+        if (vertical) {
+          style += "flex-direction:column;position:relative;will-change:transform;";
+          if (direction === "bottom") style += `top:-${visible}px;`;
         } else {
-          $item.style.marginRight = `${spaceBetween}px`;
-          $item.style.flexShrink = 0;
+          style += "position:relative;will-change:transform;";
+          if (direction === "right") style += `left:-${visible}px;`;
         }
-        const sizeEl = getElSize($item, isVertical);
-        sumSize += sizeEl + spaceBetween;
-        firstScreenVisibleSize += sizeEl + spaceBetween;
-        initialSizeElements += sizeEl + spaceBetween;
-        counterDublicateElements += 1;
-        return sizeEl;
+        $inner.style.cssText = style;
+      };
+      const getAnimDirection = (total) => direction === "right" || direction === "bottom" ? total : -total;
+      const createAnimation = () => {
+        const keyframes = `
+					@keyframes ${animName} {
+						0% { transform: translate${vertical ? "Y" : "X"}(${start}%); }
+						100% { transform: translate${vertical ? "Y" : "X"}(${getAnimDirection(visible)}px); }
+					}`;
+        const $style = document.createElement("style");
+        $style.classList.add(animName);
+        $style.innerHTML = keyframes;
+        document.head.append($style);
+        $inner.style.animation = `${animName} ${(visible + start * visible / 100) / speed}s infinite linear`;
+      };
+      const duplicateElements = () => {
+        sum = visible = base = clones = index = 0;
+        const containerSize = this.getSize($wrapper, vertical);
+        const children = originalChildren.map((el) => el.cloneNode(true));
+        $inner.innerHTML = "";
+        children.forEach((el) => {
+          el.classList.remove(this.CLASS_NAMES.clone);
+          $inner.append(el);
+        });
+        children.forEach((el) => {
+          if (vertical) el.style.marginBottom = `${space}px`;
+          else {
+            el.style.marginRight = `${space}px`;
+            el.style.flexShrink = 0;
+          }
+          const size = this.getSize(el, vertical);
+          sum += size + space;
+          visible += size + space;
+          base += size + space;
+          clones++;
+        });
+        const target = containerSize * 2 + base;
+        while (sum < target) {
+          if (!children[index]) index = 0;
+          const clone = children[index].cloneNode(true);
+          clone.classList.add(this.CLASS_NAMES.clone);
+          $inner.append(clone);
+          const size = this.getSize(clone, vertical) + space;
+          sum += size;
+          if (visible < containerSize || clones % originalLength !== 0) {
+            visible += size;
+            clones++;
+          }
+          index++;
+        }
+        setBaseStyles();
+      };
+      const pauseHandler = (e) => {
+        e.target.style.animationPlayState = e.type === "mouseenter" ? "paused" : "running";
+      };
+      const resetAnimation = () => {
+        var _a;
+        (_a = document.head.querySelector(`.${animName}`)) == null ? void 0 : _a.remove();
+        duplicateElements();
+        createAnimation();
+      };
+      const handleStart = () => {
+        start = 0;
+        $inner.removeEventListener("animationiteration", handleStart);
+        resetAnimation();
+      };
+      const addEvents = () => {
+        if (start) $inner.addEventListener("animationiteration", handleStart);
+        if (pauseOnHover) {
+          $inner.addEventListener("mouseenter", pauseHandler);
+          $inner.addEventListener("mouseleave", pauseHandler);
+        }
+      };
+      duplicateElements();
+      createAnimation();
+      addEvents();
+      this.onResize(resetAnimation);
+      this.instances.push({
+        wrapper: $wrapper,
+        inner: $inner,
+        animName
       });
-      const $multiplyWidth = $parentNodeWidth * 2 + initialSizeElements;
-      for (; sumSize < $multiplyWidth; index += 1) {
-        if (!$childrenEl[index]) index = 0;
-        const $cloneNone = $childrenEl[index].cloneNode(true);
-        const $lastElement = $marqueeInner.children[index];
-        $marqueeInner.append($cloneNone);
-        sumSize += getElSize($lastElement, isVertical) + spaceBetween;
-        if (firstScreenVisibleSize < $parentNodeWidth || counterDublicateElements % initialElementsLength !== 0) {
-          counterDublicateElements += 1;
-          firstScreenVisibleSize += getElSize($lastElement, isVertical) + spaceBetween;
-        }
-      }
-      setBaseStyles(firstScreenVisibleSize);
-    };
-    const init = () => {
-      addDublicateElements();
-      animation();
-      initEvents();
-    };
-    const onResize2 = () => {
+    });
+  }
+  destroy() {
+    this.instances.forEach(({ wrapper, inner, animName }) => {
       var _a;
-      (_a = head.querySelector(`.${animName}`)) == null ? void 0 : _a.remove();
-      init();
-    };
-    const onChangePaused = (e) => {
-      const {
-        type,
-        target
-      } = e;
-      target.style.animationPlayState = type === "mouseenter" ? "paused" : "running";
-    };
-    onWindowResize(onResize2);
-  });
+      inner.style.animation = "";
+      (_a = document.head.querySelector(`.${animName}`)) == null ? void 0 : _a.remove();
+      inner.querySelectorAll(`.${this.CLASS_NAMES.clone}`).forEach((el) => el.remove());
+      const originalChildren = Array.from(inner.children);
+      inner.remove();
+      wrapper.innerHTML = "";
+      originalChildren.forEach((child) => {
+        child.classList.remove(this.CLASS_NAMES.item);
+        wrapper.appendChild(child);
+      });
+      wrapper.classList.remove(this.CLASS_NAMES.wrapper);
+    });
+    if (this.resizeHandler) {
+      window.removeEventListener("resize", this.resizeHandler);
+      this.resizeHandler = null;
+    }
+    this.instances = [];
+    window.dispatchEvent(new CustomEvent("marquee:destroy"));
+  }
 }
-marquee();
 function showHideHeader(params) {
   const header = document.querySelector("header");
   if (!header) return;
@@ -543,7 +528,7 @@ const ssrWindow = {
     back() {
     }
   },
-  CustomEvent: function CustomEvent() {
+  CustomEvent: function CustomEvent2() {
     return this;
   },
   addEventListener() {
@@ -4850,24 +4835,24 @@ function customersSlider() {
 function changeSliders(sliderFunc, breakpoint) {
   let currentMode = null;
   let sliderInstance = null;
-  let marquee2 = null;
+  let marquee = null;
   function handleResize() {
     const isMobile = document.documentElement.clientWidth <= breakpoint;
     const newMode = isMobile ? "mobile" : "desktop";
     if (newMode !== currentMode) {
       if (isMobile) {
         sliderInstance = sliderFunc();
-        if (marquee2) {
-          marquee2.destroy();
-          marquee2 = null;
+        if (marquee) {
+          marquee.destroy();
+          marquee = null;
         }
       } else {
         if (sliderInstance) {
           sliderInstance.destroy(true, true);
           sliderInstance = null;
         }
-        if (!marquee2) {
-          marquee2 = new Marquee({
+        if (!marquee) {
+          marquee = new Marquee({
             parent: "[data-marquee]"
           });
         }

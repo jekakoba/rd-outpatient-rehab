@@ -24,7 +24,7 @@ TF.menuInit()
 // Documentation of the plugin:
 
 import "./scripts/dynamic_adapt.js"
-import "./libs/marque.js"
+import "./libs/marquee.js"
 
 // ? ===============================================
 /* Function to add and remove classes to the root element when scrolling down or up*/
