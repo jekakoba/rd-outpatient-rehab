@@ -15,9 +15,6 @@
 			font-size: toRem(40);
 		}
 	}
-	&_big {
-		@include adaptiveValue("font-size", 50, 32, 0, $containerWidth, 375);
-	}
 	&_center {
 		text-align: center;
 	}

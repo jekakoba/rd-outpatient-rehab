@@ -317,6 +317,9 @@
 	align-items: center;
 	min-height: 100vh;
 	padding-bottom: toRem(68);
+	@media (max-width: $mobile) {
+		padding-top: toRem(68);
+	}
 }
 
 //===Decor circle
