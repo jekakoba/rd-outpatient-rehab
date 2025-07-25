@@ -1,0 +1,81 @@
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.form {
+	display: grid;
+	gap: toRem(12);
+	width: 100%;
+	max-inline-size: toRem(612);
+	margin-inline: auto;
+	// .form__row
+
+	&__row {
+		display: grid;
+		gap: toRem(12);
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// .form__label
+
+	&__label {
+		border: toRem(1) solid transparent;
+		transition: border-color 0.3s;
+		border-radius: var(--input-border-radius);
+		overflow: hidden;
+		background-color: #dff1f7;
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: var(--brand-color);
+			}
+		}
+		&:has(.input:focus) {
+			border-color: var(--brand-color);
+		}
+	}
+
+	// .form__input-wrapper
+
+	&__input-wrapper {
+	}
+}
+.input {
+	padding: toRem(14);
+	width: 100%;
+	height: toRem(48);
+	outline: none;
+	font-size: toRem(18);
+	&::placeholder {
+		color: var(--primary-text-light-color-300);
+		font-size: toRem(14);
+	}
+}
+.select {
+	width: 100%;
+	height: 100%;
+	padding: toRem(14);
+	outline: none;
+	font-size: toRem(14);
+	appearance: none;
+	color: black !important;
+	cursor: pointer;
+	background: oklch(0.4764 0.2094 259.13 / 0.3)
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23FFF' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A")
+		right 10px center / 20px no-repeat;
+	@supports (appearance: base-select) {
+		&,
+		&::picker(select) {
+			appearance: base-select;
+		}
+	}
+}
+textarea.input {
+	resize: vertical;
+	min-height: toRem(130);
+}

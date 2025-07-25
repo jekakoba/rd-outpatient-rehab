@@ -1,0 +1,78 @@
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.form {
+	display: grid;
+	gap: toRem(12);
+	width: 100%;
+	max-inline-size: toRem(612);
+	margin-inline: auto;
+	// .form__row
+
+	&__row {
+		display: grid;
+		gap: toRem(12);
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// .form__label
+
+	&__label {
+		border: toRem(1) solid transparent;
+		transition: border-color 0.3s;
+		border-radius: var(--input-border-radius);
+		overflow: hidden;
+		background-color: #dff1f7;
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: var(--brand-color);
+			}
+		}
+		&:has(.input:focus) {
+			border-color: var(--brand-color);
+		}
+	}
+
+	// .form__input-wrapper
+
+	&__input-wrapper {
+	}
+}
+.input {
+	padding: toRem(14);
+	width: 100%;
+	height: toRem(48);
+	outline: none;
+	font-size: toRem(18);
+	&::placeholder {
+		color: var(--primary-text-light-color-300);
+		font-size: toRem(14);
+	}
+}
+.select {
+	width: 100%;
+	height: 100%;
+	padding: toRem(14);
+	outline: none;
+	font-size: toRem(14);
+	appearance: none;
+	color: black !important;
+	cursor: pointer;
+	@supports (appearance: base-select) {
+		&,
+		&::picker(select) {
+			appearance: base-select;
+		}
+	}
+}
+textarea.input {
+	resize: vertical;
+	min-height: toRem(130);
+}

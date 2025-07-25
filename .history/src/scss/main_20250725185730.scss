@@ -686,8 +686,5 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(38);
-		@media (max-width: $mobile) {
-			gap: toRem(32);
-		}
 	}
 }
