@@ -1,0 +1,23 @@
+<link rel='stylesheet' href='@c/faq/faq.scss' />
+
+
+<section class="faq _space-section">
+	<div id="faq" class="faq__container">
+		<div class="faq__body">
+			<div class="content content_center">
+				<div class="label-text">
+					<span>FAQ</span>
+				</div>
+				<h2 class="title title_big">Got Questions? <br> <span>We've Got You Covered</span></h2>
+				<p>Recovery can feel overwhelming — that’s why we make everything clear from the start.</p>
+			</div>
+			<div class="spoilers">
+				<fetch url="@c/UI/spoiler/faq.json">
+					<each loop="spoiler, index in response">
+						<include src="@c/UI/spoiler/_spoiler-faq.html"></include>
+					</each>
+				</fetch>
+			</div>
+		</div>
+	</div>
+</section>
