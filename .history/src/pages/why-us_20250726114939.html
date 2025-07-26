@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<include src="@h/other/head.html" locals='{
+	"pageTitle": "Why Us",
+	"meta": "We’re Not Just a Rehab. We’re the Right Fit for Your Life"
+}'>
+</include>
+
+<body>
+	<div class="wrapper">
+		<include src="@c/header/header-transparent.html"></include>
+		<main>
+			<section class="banner">
+				<div class="banner__container">
+					<div class="banner__body">
+						<div class="content content_left">
+							<div class="label-text">
+								<span>Addiction & mental health recovery</span>
+							</div>
+							<h1 class="title title_white title_main">We’re Not Just <br> a Rehab. <span>We’re the Right Fit for Your Life</span></h1>
+						</div>
+					</div>
+				</div>
+				<div class="banner__bg">
+
+					<picture>
+						<source media="(max-width: 767.98px)" srcset="@i/banners/image01-mobile.jpg" type="image/jpg">
+						<img src="@i/banners/image01.jpg" fetchpriority="high" alt="Two people shaking hands in a supportive gesture">
+					</picture>
+				</div>
+			</section>
+			<include src="@c/partners/partners.html"></include>
+			<section class="block-silder _space-section" data-slider>
+				<div class="block-silder__container">
+					<div class="block-silder__body">
+						<div class="block-silder__header">
+							<div class="content content_wide content_left">
+								<div class="label-text">
+									<span>Why Us</span>
+								</div>
+								<h2 class="title">We don’t just treat symptoms. <span>We treat people</span></h2>
+							</div>
+							<div class="swiper-navigation">
+								<button class="swiper-navigation__btn swiper-navigation__btn_prev _icon-arrow" data-prev-slide type="button" aria-label="The previous program slide"></button>
+								<button class="swiper-navigation__btn swiper-navigation__btn_next _icon-arrow" data-next-slide type="button" aria-label="The text program slide"></button>
+							</div>
+						</div>
+						<div class="block-silder__slider swiper">
+							<div class="block-silder__wrapper swiper-wrapper">
+								<fetch url="@c/cards/card-why-us.json">
+									<each loop="item, index in response">
+										<include src="@c/cards/card-item-why-us.html"></include>
+									</each>
+								</fetch>
+							</div>
+						</div>
+						<div class="block-silder__bottom">
+							<include src="@c/UI/button/_button-decor.html" locals='{
+						"class": "button  button_decor",
+						"text": "Verify Insurance",
+						"name": "heart"
+					}'>
+							</include>
+							<div class="swiper-navigation">
+								<button class="swiper-navigation__btn swiper-navigation__btn_prev _icon-arrow" data-prev-slide type="button" aria-label="The previous program slide"></button>
+								<button class="swiper-navigation__btn swiper-navigation__btn_next _icon-arrow" data-next-slide type="button" aria-label="The text program slide"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<include src="@c/reviews/reviews.html"></include>
+			<section class="block _space-section">
+				<div class="block__container">
+					<div class="block__body">
+						<div class="content content_center">
+							<div class="label-text">
+								<span>Steps</span>
+							</div>
+							<h2 class="title">Starting Your Recovery <br> <span>Is Easier Than You Think</span></h2>
+							<p>More than just treatment — we create a path to real, lasting recovery with flexibility, compassion, and clinical excellence</p>
+						</div>
+						<ul class="steps">
+							<li class="steps__item">
+								<div class="steps__number">01</div>
+								<div class="steps__body">
+									<h3 class="steps__title">Reach Out</h3>
+									<p class="steps__text">We’ll listen, answer your questions, and explain your options — no pressure, just clarity.</p>
+								</div>
+							</li>
+							<li class="steps__item">
+								<div class="steps__number">02</div>
+								<div class="steps__body">
+									<h3 class="steps__title">Verify Your Insurance</h3>
+									<p class="steps__text">No sterile hospital feel — our space is calming, modern, and built for healing. You’ll feel safe, supported, and respected from day one.</p>
+								</div>
+							</li>
+							<li class="steps__item">
+								<div class="steps__number">03</div>
+								<div class="steps__body">
+									<h3 class="steps__title">Get Your Personalized Treatment Plan</h3>
+									<p class="steps__text">Meet with a clinical specialist to create a plan that fits your goals, schedule, and diagnosis — no one-size-fits-all approach.</p>
+								</div>
+							</li>
+							<li class="steps__item">
+								<div class="steps__number">04</div>
+								<div class="steps__body">
+									<h3 class="steps__title">Start Your Program Within Days</h3>
+									<p class="steps__text">Most clients begin treatment within 24–72 hours. You’ll be supported every step of the way, from day one.</p>
+								</div>
+							</li>
+						</ul>
+						<include src="@c/UI/button/_button-decor.html" locals='{
+						"class": "button  button_decor",
+						"text": "Verify Insurance",
+						"name": "heart",
+						"alt": "heart"
+					}'>
+						</include>
+					</div>
+				</div>
+			</section>
+			<include src="@c/faq/faq.html"></include>
+		</main>
+		<include src="@c/footer/footer.html"></include>
+	</div>
+	<script type="module" crossorigin src="/src/js/main.js"></script>
+</body>
+
+</html>

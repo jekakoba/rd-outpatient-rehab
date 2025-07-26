@@ -1,0 +1,30 @@
+[
+  {
+    "number": "01",
+    "title": "Mental Health First",
+    "text": "We focus on the emotional and psychological roots of addiction — not just the behavior on the surface.",
+    "image": "/src/assets/img/cards/image05.jpg",
+    "alt": "A person conducting physical therapy, assisting another individual with their hands in a bright room with a large window."
+  },
+  {
+    "number": "02",
+    "title": "Integrated Dual Diagnosis",
+    "text": "CYou’ll never be treated in fragments. We combine substance use and mental health support into one seamless plan.",
+    "image": "/src/assets/img/cards/image06.jpg",
+    "alt": "A man sitting on a couch in a therapy room, deep in thought, with a therapist holding a notepad nearby."
+  },
+  {
+    "number": "03",
+    "title": "Personalized, Always",
+    "text": "No two people heal the same way. Every plan is tailored to the individual, not a standard protocol.",
+    "image": "/src/assets/img/cards/image03.jpg",
+    "alt": "A woman sitting in a chair in a cozy room with a lamp, talking to another person."
+  },
+  {
+    "number": "04",
+    "title": "Connection Over Checklists",
+    "text": "We believe people heal through trust, safety, and real connection — not bureaucracy or cold clinical routines.",
+    "image": "/src/assets/img/cards/image04.jpg",
+    "alt": "A woman in a business suit sitting at a table, talking to a person in uniform."
+  }
+]

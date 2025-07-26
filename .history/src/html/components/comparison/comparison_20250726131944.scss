@@ -1,0 +1,26 @@
+.comparison {
+	// .comparison__container
+
+	&__container {
+	}
+
+	// .comparison__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(56);
+	}
+}
+.table {
+	border-radius: var(--main-border-radius);
+	border: toRem(1) solid rgba(0, 0, 0, 0.05);
+	background: var(--light-color-700);
+	padding: toRem(24);
+	// .table__row
+
+	&__row {
+		display: grid;
+		grid-template-columns: toRem(20) 1fr toRem(120) toRem(120);
+	}
+}

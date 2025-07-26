@@ -1,0 +1,37 @@
+.comparison {
+	// .comparison__container
+
+	&__container {
+	}
+
+	// .comparison__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(56);
+	}
+}
+
+.table {
+	width: 100%;
+	padding: toRem(24);
+	border-radius: var(--main-border-radius);
+	border: toRem(1) solid rgba(0, 0, 0, 0.05);
+	background-color: var(--light-color-700);
+	tbody {
+		tr {
+			min-block-size: toRem(60);
+			td {
+				&:first-child {
+					font-size: toRem(14);
+					color: var(--primary-text-light-color-400);
+				}
+				&:nth-child(2) {
+					font-size: toRem(18);
+					line-height: 1.3;
+				}
+			}
+		}
+	}
+}

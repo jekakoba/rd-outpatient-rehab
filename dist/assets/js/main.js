@@ -4790,6 +4790,7 @@ function initSliders() {
         spaceBetween: 12,
         speed: 400,
         autoHeight: false,
+        allowTouchMove: false,
         navigation: {
           prevEl: prevButtons,
           nextEl: nextButtons

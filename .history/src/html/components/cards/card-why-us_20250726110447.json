@@ -1,0 +1,44 @@
+[
+  {
+    "number": "01",
+    "title": "Mental Health First",
+    "text": "We focus on the emotional and psychological roots of addiction — not just the behavior on the surface.",
+    "image": "/src/assets/img/cards/image05.jpg",
+    "alt": "Two people sitting and talking in a cozy living room"
+  },
+  {
+    "number": "02",
+    "title": "Integrated Dual Diagnosis",
+    "text": "CYou’ll never be treated in fragments. We combine substance use and mental health support into one seamless plan.",
+    "image": "/src/assets/img/cards/image06.jpg",
+    "alt": "Heartbeat monitor showing a green graph."
+  },
+  {
+    "number": "03",
+    "title": "Personalized, Always",
+    "text": "No two people heal the same way. Every plan is tailored to the individual, not a standard protocol.",
+    "image": "/src/assets/img/cards/image07.jpg",
+    "alt": "A woman sitting in a chair in a cozy room with a lamp, talking to another person."
+  },
+  {
+    "number": "04",
+    "title": "Connection Over Checklists",
+    "text": "We believe people heal through trust, safety, and real connection — not bureaucracy or cold clinical routines.",
+    "image": "/src/assets/img/cards/image03.jpg",
+    "alt": "A woman in a business suit sitting at a table, talking to a person in uniform."
+  },
+  {
+    "number": "05",
+    "title": "Results That Go Beyond Attendance",
+    "text": "We don’t just track whether you show up. We track how you feel, function, and transform.",
+    "image": "/src/assets/img/cards/image08.jpg",
+    "alt": "A woman in a business suit sitting at a table, talking to a person in uniform."
+  },
+  {
+    "number": "06",
+    "title": "Healing That Lasts",
+    "text": "From day one, we help you build lifelong coping tools and relapse prevention strategies that stick long after treatment ends.",
+    "image": "/src/assets/img/cards/image09.jpg",
+    "alt": "A woman in a business suit sitting at a table, talking to a person in uniform."
+  }
+]
