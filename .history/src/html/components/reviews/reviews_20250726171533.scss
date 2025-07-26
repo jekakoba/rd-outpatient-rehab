@@ -144,7 +144,7 @@
 	max-inline-size: toRem(400);
 	margin-inline: auto;
 	.card-review {
-		max-inline-size: toRem(400);
+		width: auto;
 		gap: toRem(12);
 		padding: toRem(20);
 		border-radius: var(--xl-border-radius);
@@ -158,6 +158,7 @@
 		}
 		.profile-review__profession {
 			font-size: toRem(14);
+			font-weight: 500;
 			color: var(--primary-text-light-color-400);
 		}
 		.profile-review__name,

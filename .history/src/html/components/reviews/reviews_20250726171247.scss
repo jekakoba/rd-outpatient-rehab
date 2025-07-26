@@ -144,7 +144,7 @@
 	max-inline-size: toRem(400);
 	margin-inline: auto;
 	.card-review {
-		max-inline-size: toRem(400);
+		width: auto;
 		gap: toRem(12);
 		padding: toRem(20);
 		border-radius: var(--xl-border-radius);
@@ -152,25 +152,8 @@
 		background-color: rgba(255, 255, 255, 0.8);
 		box-shadow: 0 0 toRem(24) 0 rgba(0, 0, 0, 0.12);
 		backdrop-filter: blur(toRem(8));
-		-webkit-backdrop-filter: blur(toRem(8));
 		.card-review__header {
 			align-items: center;
-		}
-		.profile-review__profession {
-			font-size: toRem(14);
-			color: var(--primary-text-light-color-400);
-		}
-		.profile-review__name,
-		.profile-review__profession {
-			font-weight: 500;
-		}
-		.profile-review__avatar {
-			flex: 0 0 toRem(45);
-			width: toRem(45);
-			height: toRem(45);
-		}
-		.profile-review__body {
-			gap: toRem(2);
 		}
 		.card-review__quote {
 			// font-size: toRem(14);

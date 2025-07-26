@@ -144,7 +144,7 @@
 	max-inline-size: toRem(400);
 	margin-inline: auto;
 	.card-review {
-		max-inline-size: toRem(400);
+		width: auto;
 		gap: toRem(12);
 		padding: toRem(20);
 		border-radius: var(--xl-border-radius);

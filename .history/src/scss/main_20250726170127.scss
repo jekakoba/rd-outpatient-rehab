@@ -754,8 +754,25 @@
 	// .reviews-section__body
 
 	&__body {
-		display: flex;
-		flex-direction: column;
-		gap: toRem(52);
+	}
+}
+. {
+	// ._space-section
+
+	&_space-section {
+	}
+}
+.content {
+	// .content_center
+
+	&_center {
+	}
+}
+.label-text {
+}
+.title {
+	// .title_main
+
+	&_main {
 	}
 }

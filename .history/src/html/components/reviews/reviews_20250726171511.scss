@@ -144,7 +144,7 @@
 	max-inline-size: toRem(400);
 	margin-inline: auto;
 	.card-review {
-		max-inline-size: toRem(400);
+		width: auto;
 		gap: toRem(12);
 		padding: toRem(20);
 		border-radius: var(--xl-border-radius);
@@ -155,14 +155,11 @@
 		-webkit-backdrop-filter: blur(toRem(8));
 		.card-review__header {
 			align-items: center;
+			font-weight: 500;
 		}
 		.profile-review__profession {
 			font-size: toRem(14);
 			color: var(--primary-text-light-color-400);
-		}
-		.profile-review__name,
-		.profile-review__profession {
-			font-weight: 500;
 		}
 		.profile-review__avatar {
 			flex: 0 0 toRem(45);
