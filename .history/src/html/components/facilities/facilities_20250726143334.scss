@@ -1,0 +1,32 @@
+.facilities {
+	// .facilities__container
+
+	&__container {
+	}
+
+	// .facilities__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(56);
+		width: 100%;
+	}
+	&__wrapper {
+	}
+}
+.facilities-list {
+	width: 100%;
+}
+.facilities-item {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: toRem(72);
+	// .facilities-item__body
+
+	&__body {
+	}
+	.image {
+		padding-bottom: 84%;
+	}
+}

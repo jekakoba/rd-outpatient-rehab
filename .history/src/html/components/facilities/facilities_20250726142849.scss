@@ -1,0 +1,19 @@
+.facilities {
+	// .facilities__container
+
+	&__container {
+	}
+
+	// .facilities__body
+
+	&__body {
+	}
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: toRem(20);
+	}
+	.image {
+		padding-bottom: 100%;
+	}
+}

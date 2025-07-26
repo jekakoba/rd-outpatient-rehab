@@ -1,0 +1,589 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facility</title>
+    <link rel="preload" href="./assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/Satoshi-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/Satoshi-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <meta name="description" content="A Space That Feels Like Support, Like Home">
+    <script type="module" crossorigin="" src="./assets/js/main.js"></script>
+    <link rel="stylesheet" crossorigin="" href="./assets/css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header header_transparent">
+        <div class="header__container">
+          <div class="header__body">
+            <a class="logo" href="index.html" aria-label="RD Outpatient Rehab">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+                <path d="M12.7 21.6514C13.2477 22.1373 13.9139 22.4701 14.6313 22.6162C15.3487 22.7624 16.092 22.7167 16.7861 22.4838C17.4802 22.2509 18.1006 21.839 18.5847 21.2898C19.0688 20.7405 19.3994 20.0733 19.5432 19.3554L19.595 19.095C20.5193 18.8995 21.3597 18.421 21.9995 17.726C22.6393 17.031 23.0468 16.154 23.1653 15.2168C23.2839 14.2796 23.1076 13.3287 22.6609 12.4963C22.2143 11.6639 21.5195 10.9912 20.673 10.5718C21.0282 10.2442 21.3118 9.8465 21.5057 9.40388C21.6997 8.96125 21.7999 8.48326 21.8 8V7.7228C21.7996 6.84963 21.4969 6.00353 20.9434 5.32824C20.3898 4.65295 19.6195 4.19013 18.7634 4.0184L18.195 3.9064L18.0186 3.0272C17.9071 2.46958 17.6572 1.94893 17.2919 1.51314C16.9266 1.07734 16.4576 0.740371 15.928 0.533219C15.3984 0.326066 14.8252 0.255376 14.2612 0.327646C13.6971 0.399915 13.1603 0.612826 12.7 0.946804V21.6514ZM11.3 0.945404C10.8398 0.611101 10.3028 0.39792 9.73856 0.325473C9.17432 0.253027 8.60093 0.323641 8.07113 0.530821C7.54133 0.738 7.07214 1.07509 6.70673 1.51108C6.34132 1.94707 6.09142 2.46795 5.98003 3.0258L5.80503 3.905L5.23663 4.0184C4.38051 4.19013 3.61024 4.65295 3.05668 5.32824C2.50313 6.00353 2.20044 6.84963 2.20003 7.7228V8C2.20003 9.0164 2.63403 9.932 3.32703 10.5718C2.48057 10.9912 1.78576 11.6639 1.33912 12.4963C0.892473 13.3287 0.716175 14.2796 0.834711 15.2168C0.953248 16.154 1.36073 17.031 2.00056 17.726C2.64039 18.421 3.4808 18.8995 4.40503 19.095L4.45683 19.354C4.60046 20.072 4.93095 20.7394 5.41496 21.2888C5.89896 21.8383 6.51935 22.2503 7.21349 22.4833C7.90763 22.7164 8.65097 22.7622 9.36847 22.6161C10.086 22.47 10.7522 22.1373 11.3 21.6514V0.945404Z" fill="#11D3AC"></path>
+              </svg>
+              <span>RD Outpatient Rehab</span>
+            </a>
+            <div class="header__column">
+              <div class="header__menu-wrapper">
+                <div class="header__menu-scroll">
+                  <div class="menu">
+                    <nav class="menu__body">
+                      <ul class="menu__list">
+                        <li class="menu__item">
+                          <a href="why-us.html" class="menu__link _hover-link">Why Us</a>
+                        </li>
+                        <li class="menu__item">
+                          <a href="reviews.html" class="menu__link _hover-link">Reviews</a>
+                        </li>
+                        <li class="menu__item">
+                          <a href="facilities.html" class="menu__link _hover-link">Facilities</a>
+                        </li>
+                        <li class="menu__item">
+                          <a href="faq.html" class="menu__link _hover-link">FAQ</a>
+                        </li>
+                        <li class="menu__item">
+                          <a href="contact.html" class="menu__link _hover-link">Contact</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <img class="logo-text" src="./assets/img/logo-text-dark.svg" fetchpriority="high" width="343" height="36" alt="RD Outpatient Rehab">
+                </div>
+              </div>
+              <div class="header__actions">
+                <a class="button button_small button_bold-desktop" href="#">
+                  <span>Contact US</span>
+                </a>
+              </div>
+            </div>
+            <button class="icon-menu" type="button" data-menu-open="" aria-label="toggle menu">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="banner">
+          <div class="banner__container">
+            <div class="banner__body">
+              <div class="content content_left">
+                <div class="label-text">
+                  <span>Addiction &amp; mental health recovery</span>
+                </div>
+                <h1 class="title title_white title_main">
+                  A Space That Feels
+                  <span>Like Support, Like Home</span>
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="banner__bg">
+            <img src="./assets/img/banners/image02.webp" fetchpriority="high" alt="Two people shaking hands in a supportive gesture">
+          </div>
+        </section>
+        <!-- ====== Imports ====== -->
+        <section class="partners _space-section _space-section_small">
+          <div class="partners__container">
+            <div class="partners__body">
+              <h2 class="partners__title">We Accept Most Insurance Plans:</h2>
+              <ul class="partners-list">
+                <li class="partner-item">
+                  <img src="./assets/img/partners/aetna.svg" width="125" height="44" alt="aetna">
+                </li>
+                <li class="partner-item">
+                  <img src="./assets/img/partners/cigna.svg" width="125" height="44" alt="cigna">
+                </li>
+                <li class="partner-item">
+                  <img src="./assets/img/partners/united-health-group.svg" width="125" height="44" alt="united health group">
+                </li>
+                <li class="partner-item">
+                  <img src="./assets/img/partners/blue-cross.svg" width="125" height="44" alt="blue cross">
+                </li>
+                <li class="partner-item">
+                  <img src="./assets/img/partners/magellan-health.svg" width="125" height="44" alt="magellan health">
+                </li>
+              </ul>
+              <p class="partners__text">We'll help you verify coverage in minutes — 100% confidential.</p>
+            </div>
+          </div>
+        </section>
+        <!-- ====== Imports ====== -->
+        <section class="facilities _space-section">
+          <div class="facilities__container facilities__container_xl">
+            <div class="facilities__body">
+              <div class="content content_center">
+                <div class="label-text">
+                  <span>Facilities</span>
+                </div>
+                <h2 class="title">
+                  More Than a Clinic.
+                  <br>
+                  <span>Designed for Real Recovery</span>
+                </h2>
+                <p>Every part of our center is intentionally built to support healing</p>
+              </div>
+              <div class="facilities-list">
+                <div class="facilities-item">
+                  <div class="facilities-item__body">
+                    <div class="facilities-item__block">
+                      <div class="title-block">
+                        <div class="title-block__number">01</div>
+                        <h3 class="title-block__title">Group Therapy &amp; Clinical Spaces</h3>
+                      </div>
+                      <p>
+                        Purposefully designed for therapeutic engagement, emotional safety, and focused healing
+                      </p>
+                    </div>
+                    <ul class="tags">
+                      <li>Trauma-informed sessions</li>
+                      <li>modalities</li>
+                      <li>Private 1-on-1 counseling pods</li>
+                      <li>Mindfulness</li>
+                      <li>stress reduction work</li>
+                    </ul>
+                    <div class="facilities-item__block">
+                      <span class="facilities-item__label">Accepted insurance:</span>
+                      <ul class="partners-list partners-list_small">
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/aetna.svg" width="125" height="44" alt="aetna">
+                        </li>
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/cigna.svg" width="125" height="44" alt="cigna">
+                        </li>
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/united-health-group.svg" width="125" height="44" alt="united health group">
+                        </li>
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/magellan-health.svg" width="125" height="44" alt="magellan health">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="image ibg">
+                    <img src="./assets/img/facilities/image01.webp" loading="lazy" width="500" height="420" alt="Modern living room with a green sofa, gold tables and beige curtains.">
+                  </div>
+                </div>
+                <div class="facilities-item">
+                  <div class="facilities-item__body">
+                    <div class="facilities-item__block">
+                      <div class="title-block">
+                        <div class="title-block__number">02</div>
+                        <h3 class="title-block__title">Community &amp; Recovery Lounge</h3>
+                      </div>
+                      <p>
+                        Shared spaces that nurture connection and accountability between clients — even outside formal sessions.
+                      </p>
+                    </div>
+                    <ul class="tags">
+                      <li>Process groups</li>
+                      <li>peer-led support</li>
+                      <li>expressive therapy</li>
+                      <li>Family engagement zones</li>
+                      <li>Comfortable relaxation areas</li>
+                    </ul>
+                    <div class="facilities-item__block">
+                      <span class="facilities-item__label">Accepted insurance:</span>
+                      <ul class="partners-list partners-list_small">
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/aetna.svg" width="125" height="44" alt="aetna">
+                        </li>
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/cigna.svg" width="125" height="44" alt="cigna">
+                        </li>
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/united-health-group.svg" width="125" height="44" alt="united health group">
+                        </li>
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/magellan-health.svg" width="125" height="44" alt="magellan health">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="image ibg">
+                    <img src="./assets/img/facilities/image02.webp" loading="lazy" width="500" height="420" alt="The ward of hospital with bed, blue curtains and TV on the wall.">
+                  </div>
+                </div>
+                <div class="facilities-item">
+                  <div class="facilities-item__body">
+                    <div class="facilities-item__block">
+                      <div class="title-block">
+                        <div class="title-block__number">03</div>
+                        <h3 class="title-block__title">Wellness &amp; Nutrition Support Areas</h3>
+                      </div>
+                      <p>
+                        Healing begins with the body. Our wellness areas help clients build healthy, sustainable habits in recovery.
+                      </p>
+                    </div>
+                    <ul class="tags">
+                      <li>Nutritional counseling</li>
+                      <li>Holistic wellness education</li>
+                      <li>Stress management techniques</li>
+                      <li>Group mealtime</li>
+                    </ul>
+                    <div class="facilities-item__block">
+                      <span class="facilities-item__label">Accepted insurance:</span>
+                      <ul class="partners-list partners-list_small">
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/aetna.svg" width="125" height="44" alt="aetna">
+                        </li>
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/cigna.svg" width="125" height="44" alt="cigna">
+                        </li>
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/united-health-group.svg" width="125" height="44" alt="united health group">
+                        </li>
+                        <li class="partner-item">
+                          <img src="./assets/img/partners/magellan-health.svg" width="125" height="44" alt="magellan health">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="image ibg">
+                    <img src="./assets/img/facilities/image03.webp" loading="lazy" width="500" height="420" alt="Modern kitchen with a white island table, wooden chairs and hanging lamps.">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ====== Imports ====== -->
+        <div class="reviews _space-section">
+          <div class="reviews__container">
+            <div class="content content_center">
+              <div class="label-text">
+                <span>Reviews</span>
+              </div>
+              <h2 class="title">
+                What do clients
+                <br>
+                <span>say about us</span>
+              </h2>
+              <p>
+                We’re proud to help people transform their lives — with care that’s flexible, personal, and proven to work.
+              </p>
+            </div>
+          </div>
+          <div class="reviews__slider swiper">
+            <div class="reviews__wrapper swiper-wrapper">
+              <div data-marquee="" data-marquee-speed="500" data-marquee-pause-mouse-enter="" data-marquee-space="16" data-marquee-direction="left">
+                <div class="card-review swiper-slide" data-da=".reviews__wrapper, 767.98">
+                  <div class="card-review__header">
+                    <div class="card-review__profile profile-review">
+                      <div class="profile-review__avatar">
+                        <img src="./assets/img/reviews/avatar.webp" loading="lazy" width="48" height="48" alt="Taylor G">
+                      </div>
+                      <div class="profile-review__body">
+                        <span class="profile-review__name">Taylor G.</span>
+                        <span class="profile-review__profession">PHP client</span>
+                      </div>
+                    </div>
+                    <div class="rating">
+                      <div class="rating__item">
+                        <img src="./assets/img/icons/star.svg" width="15" height="15" alt="star">
+                      </div>
+                      <div class="rating__item">
+                        <img src="./assets/img/icons/star.svg" width="15" height="15" alt="star">
+                      </div>
+                      <div class="rating__item">
+                        <img src="./assets/img/icons/star.svg" width="15" height="15" alt="star">
+                      </div>
+                      <div class="rating__item">
+                        <img src="./assets/img/icons/star.svg" width="15" height="15" alt="star">
+                      </div>
+                      <div class="rating__item">
+                        <img src="./assets/img/icons/star.svg" width="15" height="15" alt="star">
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote class="card-review__quote">
+                    “I was nervous at first, but the staff made me feel at home. Their IOP helped me rebuild my routine without falling behind at work.”
+                  </blockquote>
+                </div>
+              </div>
+              <div data-marquee="" data-marquee-speed="500" data-marquee-pause-mouse-enter="" data-marquee-space="16" data-marquee-direction="right">
+                <div class="card-review swiper-slide" data-da=".reviews__wrapper, 767.98">
+                  <div class="card-review__header">
+                    <div class="card-review__profile profile-review">
+                      <div class="profile-review__avatar">
+                        <img src="./assets/img/reviews/avatar.webp" width="48" height="48" alt="Taylor G">
+                      </div>
+                      <div class="profile-review__body">
+                        <span class="profile-review__name">Taylor G.</span>
+                        <span class="profile-review__profession">PHP client</span>
+                      </div>
+                    </div>
+                    <div class="rating">
+                      <div class="rating__item">
+                        <img src="./assets/img/icons/star.svg" width="15" height="15" alt="star">
+                      </div>
+                      <div class="rating__item">
+                        <img src="./assets/img/icons/star.svg" width="15" height="15" alt="star">
+                      </div>
+                      <div class="rating__item">
+                        <img src="./assets/img/icons/star.svg" width="15" height="15" alt="star">
+                      </div>
+                      <div class="rating__item">
+                        <img src="./assets/img/icons/star.svg" width="15" height="15" alt="star">
+                      </div>
+                      <div class="rating__item">
+                        <img src="./assets/img/icons/star.svg" width="15" height="15" alt="star">
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote class="card-review__quote">
+                    “I was nervous at first, but the staff made me feel at home. Their IOP helped me rebuild my routine without falling behind at work.”
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-navigation">
+              <button class="swiper-navigation__btn swiper-navigation__btn_prev _icon-arrow" data-prev-slide="" type="button" aria-label="The previous program slide"></button>
+              <button class="swiper-navigation__btn swiper-navigation__btn_next _icon-arrow" data-next-slide="" type="button" aria-label="The text program slide"></button>
+            </div>
+          </div>
+        </div>
+        <section class="block _space-section">
+          <div class="block__container">
+            <div class="block__body">
+              <div class="content content_center">
+                <div class="label-text">
+                  <span>Steps</span>
+                </div>
+                <h2 class="title">
+                  Starting Your Recovery
+                  <br>
+                  <span>Is Easier Than You Think</span>
+                </h2>
+                <p>
+                  More than just treatment — we create a path to real, lasting recovery with flexibility, compassion, and clinical excellence
+                </p>
+              </div>
+              <ul class="steps">
+                <li class="steps__item">
+                  <div class="steps__number">01</div>
+                  <div class="steps__body">
+                    <h3 class="steps__title">Reach Out</h3>
+                    <p class="steps__text">
+                      We’ll listen, answer your questions, and explain your options — no pressure, just clarity.
+                    </p>
+                  </div>
+                </li>
+                <li class="steps__item">
+                  <div class="steps__number">02</div>
+                  <div class="steps__body">
+                    <h3 class="steps__title">Verify Your Insurance</h3>
+                    <p class="steps__text">
+                      Submit your info online or over the phone. We’ll handle the paperwork and confirm what’s covered in minutes.
+                    </p>
+                  </div>
+                </li>
+                <li class="steps__item">
+                  <div class="steps__number">03</div>
+                  <div class="steps__body">
+                    <h3 class="steps__title">Get Your Personalized Treatment Plan</h3>
+                    <p class="steps__text">
+                      Meet with a clinical specialist to create a plan that fits your goals, schedule, and diagnosis — no one-size-fits-all approach.
+                    </p>
+                  </div>
+                </li>
+                <li class="steps__item">
+                  <div class="steps__number">04</div>
+                  <div class="steps__body">
+                    <h3 class="steps__title">Start Your Program Within Days</h3>
+                    <p class="steps__text">
+                      Most clients begin treatment within 24–72 hours. You’ll be supported every step of the way, from day one.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <a class="button button_decor" href="#">
+                <i>
+                  <img src="./assets/img/icons/heart.svg" width="16" height="16" alt="heart">
+                </i>
+                <span>Verify Insurance</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="faq _space-section">
+          <div id="faq" class="faq__container">
+            <div class="faq__body">
+              <div class="content content_center">
+                <div class="label-text">
+                  <span>FAQ</span>
+                </div>
+                <h2 class="title">
+                  Got Questions?
+                  <br>
+                  <span>We've Got You Covered</span>
+                </h2>
+                <p>
+                  Recovery can feel overwhelming — that’s why we make everything clear from the start.
+                </p>
+              </div>
+              <div class="spoilers">
+                <div class="spoiler" data-spoiler="" data-spoiler-group="one">
+                  <button class="spoiler__panel" type="button" data-spoiler-title="">
+                    <span class="spoiler__text">
+                      <span>What’s the difference between PHP and IOP?</span>
+                    </span>
+                    <i class="spoiler__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9657 7.15958L13.4901 0.651841L6.98232 3.17621L0.472817 0.650074L2.99896 7.15958L0.472228 13.6697L6.98232 11.1429L13.4918 13.6691L10.9657 7.15958Z" fill="#11D3AC"></path>
+                      </svg>
+                    </i>
+                  </button>
+                  <div class="spoiler__content" data-spoiler-content="">
+                    <div class="spoiler__body">
+                      <p>
+                        PHP is more intensive — 5+ hours a day, 5 days/week. IOP is part-time, ideal for balancing work or school with recovery.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="spoiler" data-spoiler="" data-spoiler-group="one">
+                  <button class="spoiler__panel" type="button" data-spoiler-title="">
+                    <span class="spoiler__text">
+                      <span>What conditions do you treat?</span>
+                    </span>
+                    <i class="spoiler__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9657 7.15958L13.4901 0.651841L6.98232 3.17621L0.472817 0.650074L2.99896 7.15958L0.472228 13.6697L6.98232 11.1429L13.4918 13.6691L10.9657 7.15958Z" fill="#11D3AC"></path>
+                      </svg>
+                    </i>
+                  </button>
+                  <div class="spoiler__content" data-spoiler-content="">
+                    <div class="spoiler__body">
+                      <p>
+                        PHP is more intensive — 5+ hours a day, 5 days/week. IOP is part-time, ideal for balancing work or school with recovery.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="spoiler" data-spoiler="" data-spoiler-group="one">
+                  <button class="spoiler__panel" type="button" data-spoiler-title="">
+                    <span class="spoiler__text">
+                      <span>Do you accept insurance?</span>
+                    </span>
+                    <i class="spoiler__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9657 7.15958L13.4901 0.651841L6.98232 3.17621L0.472817 0.650074L2.99896 7.15958L0.472228 13.6697L6.98232 11.1429L13.4918 13.6691L10.9657 7.15958Z" fill="#11D3AC"></path>
+                      </svg>
+                    </i>
+                  </button>
+                  <div class="spoiler__content" data-spoiler-content="">
+                    <div class="spoiler__body">
+                      <p>
+                        PHP is more intensive — 5+ hours a day, 5 days/week. IOP is part-time, ideal for balancing work or school with recovery.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="spoiler" data-spoiler="" data-spoiler-group="one">
+                  <button class="spoiler__panel" type="button" data-spoiler-title="">
+                    <span class="spoiler__text">
+                      <span>How soon can I start?</span>
+                    </span>
+                    <i class="spoiler__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9657 7.15958L13.4901 0.651841L6.98232 3.17621L0.472817 0.650074L2.99896 7.15958L0.472228 13.6697L6.98232 11.1429L13.4918 13.6691L10.9657 7.15958Z" fill="#11D3AC"></path>
+                      </svg>
+                    </i>
+                  </button>
+                  <div class="spoiler__content" data-spoiler-content="">
+                    <div class="spoiler__body">
+                      <p>
+                        PHP is more intensive — 5+ hours a day, 5 days/week. IOP is part-time, ideal for balancing work or school with recovery.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="spoiler" data-spoiler="" data-spoiler-group="one">
+                  <button class="spoiler__panel" type="button" data-spoiler-title="">
+                    <span class="spoiler__text">
+                      <span>Can I keep working during treatment?</span>
+                    </span>
+                    <i class="spoiler__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9657 7.15958L13.4901 0.651841L6.98232 3.17621L0.472817 0.650074L2.99896 7.15958L0.472228 13.6697L6.98232 11.1429L13.4918 13.6691L10.9657 7.15958Z" fill="#11D3AC"></path>
+                      </svg>
+                    </i>
+                  </button>
+                  <div class="spoiler__content" data-spoiler-content="">
+                    <div class="spoiler__body">
+                      <p>
+                        PHP is more intensive — 5+ hours a day, 5 days/week. IOP is part-time, ideal for balancing work or school with recovery.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="spoiler" data-spoiler="" data-spoiler-group="one">
+                  <button class="spoiler__panel" type="button" data-spoiler-title="">
+                    <span class="spoiler__text">
+                      <span>Is everything confidential?</span>
+                    </span>
+                    <i class="spoiler__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9657 7.15958L13.4901 0.651841L6.98232 3.17621L0.472817 0.650074L2.99896 7.15958L0.472228 13.6697L6.98232 11.1429L13.4918 13.6691L10.9657 7.15958Z" fill="#11D3AC"></path>
+                      </svg>
+                    </i>
+                  </button>
+                  <div class="spoiler__content" data-spoiler-content="">
+                    <div class="spoiler__body">
+                      <p>
+                        PHP is more intensive — 5+ hours a day, 5 days/week. IOP is part-time, ideal for balancing work or school with recovery.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__body">
+            <div class="content content_center content_white">
+              <div class="label-text label-text_dark">
+                <span>Let’s start</span>
+              </div>
+              <h2 class="title">Let’s Make Your Recovery Real Starting Today</h2>
+              <p>
+                Whether you’re ready to begin or just exploring options, we’re here to help — with no pressure, no judgment, and full privacy.
+              </p>
+              <a class="button button_decor" href="#">
+                <i>
+                  <img src="./assets/img/icons/heart.svg" width="16" height="16" alt="heart">
+                </i>
+                <span>Verify Insurance</span>
+              </a>
+            </div>
+            <div class="footer__bottom">
+              <nav class="footer__navigation">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="why-us.html" class="footer__link _hover-link">Why Us</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="reviews.html" class="footer__link _hover-link">Reviews</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="facilities.html" class="footer__link _hover-link">Facilities</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="faq.html" class="footer__link _hover-link">FAQ</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="contact.html" class="footer__link _hover-link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+              <img class="logo-text" src="./assets/img/logo-text.svg" fetchpriority="high" width="1238" height="130" alt="RD Outpatient Rehab">
+              <p class="footer__copy">2025 © 2025 RD Outpatient Rehab | All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  
+
+</body></html>

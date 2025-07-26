@@ -1,0 +1,44 @@
+.facilities {
+	// .facilities__container
+
+	&__container {
+	}
+
+	// .facilities__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(56);
+	}
+}
+.facilities-list {
+	display: grid;
+	gap: toRem(44);
+}
+.facilities-item {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: toRem(72);
+	// .facilities-item__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(24);
+		align-items: start;
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(14);
+	}
+	&__label {
+		font-size: toRem(12);
+		color: var(--primary-text-light-color);
+	}
+	.image {
+		padding-bottom: 84%;
+	}
+}
