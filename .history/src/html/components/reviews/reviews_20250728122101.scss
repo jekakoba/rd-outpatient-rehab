@@ -143,17 +143,16 @@
 
 .carousel-reviews-body {
 	// padding-inline: 30%;
-	@include adaptiveValue("padding-inline", 400, 110, 0, $containerWidth, 767.98);
+	@include adaptiveValue("padding-inline", 370, 110, 0, $containerWidth, 767.98);
 	@media (max-width: $mobile) {
-		padding-inline-start: toRem(16);
-		padding-inline-end: toRem(48);
+		@include adaptiveValue("padding-inline", 370, 110, 0, 767.98, 375);
 	}
 	// max-width: toRem(600);
 	// margin: 0 auto;
 }
 
 .carousel-reviews {
-	// padding: toRem(30);
+	padding: toRem(30);
 	&.swiper {
 		overflow: visible;
 	}

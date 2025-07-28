@@ -66,10 +66,23 @@ function initSliders() {
 				// cenetredSlides: true,
 				cardsEffect: {
 					perSlideRotate: 2,
-					perSlideOffset: 8,
+					perSlideOffset: 4,
 					slideShadows: false,
 				},
+				breakpoints: {
+					320: {
+						cardsEffect: {
+							perSlideRotate: 4,
 
+						},
+					},
+					768.98: {
+						cardsEffect: {
+							perSlideRotate: 4,
+
+						},
+					},
+				},
 				// loop: true,
 				grabCursor: true,
 				// autoplay: {

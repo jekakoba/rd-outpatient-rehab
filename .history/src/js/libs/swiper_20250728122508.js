@@ -66,7 +66,7 @@ function initSliders() {
 				// cenetredSlides: true,
 				cardsEffect: {
 					perSlideRotate: 2,
-					perSlideOffset: 8,
+					perSlideOffset: 4,
 					slideShadows: false,
 				},
 

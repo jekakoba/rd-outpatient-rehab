@@ -69,7 +69,20 @@ function initSliders() {
 					perSlideOffset: 8,
 					slideShadows: false,
 				},
+				breakpoints: {
+					320: {
+						cardsEffect: {
+							perSlideRotate: 1,
 
+						},
+					},
+					768.98: {
+						cardsEffect: {
+							perSlideRotate: 8,
+
+						},
+					},
+				},
 				// loop: true,
 				grabCursor: true,
 				// autoplay: {

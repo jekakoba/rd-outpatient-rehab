@@ -142,18 +142,12 @@
 //=================//
 
 .carousel-reviews-body {
-	// padding-inline: 30%;
-	@include adaptiveValue("padding-inline", 400, 110, 0, $containerWidth, 767.98);
-	@media (max-width: $mobile) {
-		padding-inline-start: toRem(16);
-		padding-inline-end: toRem(48);
-	}
-	// max-width: toRem(600);
-	// margin: 0 auto;
+	max-width: toRem(600);
+	margin: 0 auto;
 }
 
 .carousel-reviews {
-	// padding: toRem(30);
+	padding: toRem(30);
 	&.swiper {
 		overflow: visible;
 	}
@@ -166,7 +160,7 @@
 		transition:
 			filter 0.4s ease,
 			transform 0.4s ease,
-			opacity 3s ease;
+			opacity 0.4s ease;
 		gap: toRem(12);
 		padding: toRem(20);
 		border-radius: var(--xl-border-radius);

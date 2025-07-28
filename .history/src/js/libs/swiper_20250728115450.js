@@ -60,21 +60,14 @@ function initSliders() {
 				observeParents: true,
 				slidesPerView: 1,
 				spaceBetween: 12,
-				speed: 600,
+				speed: 400,
 				effect: 'cards',
-				// loop: true,
-				// cenetredSlides: true,
-				cardsEffect: {
-					perSlideRotate: 2,
-					perSlideOffset: 8,
-					slideShadows: false,
-				},
-
+				perSlideOffset: 20,
 				// loop: true,
 				grabCursor: true,
-				// autoplay: {
-				// 	delay: 1000,
-				// },
+				autoplay: {
+					delay: 1000,
+				},
 			};
 
 			const swiperCarouselReviews = new Swiper(slider, config);

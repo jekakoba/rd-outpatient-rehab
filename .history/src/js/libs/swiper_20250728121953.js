@@ -62,6 +62,7 @@ function initSliders() {
 				spaceBetween: 12,
 				speed: 600,
 				effect: 'cards',
+				autoHeight: true,
 				// loop: true,
 				// cenetredSlides: true,
 				cardsEffect: {
@@ -69,7 +70,6 @@ function initSliders() {
 					perSlideOffset: 8,
 					slideShadows: false,
 				},
-
 				// loop: true,
 				grabCursor: true,
 				// autoplay: {

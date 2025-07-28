@@ -142,18 +142,12 @@
 //=================//
 
 .carousel-reviews-body {
-	// padding-inline: 30%;
-	@include adaptiveValue("padding-inline", 400, 110, 0, $containerWidth, 767.98);
-	@media (max-width: $mobile) {
-		padding-inline-start: toRem(16);
-		padding-inline-end: toRem(48);
-	}
-	// max-width: toRem(600);
-	// margin: 0 auto;
+	max-width: toRem(600);
+	margin: 0 auto;
 }
 
 .carousel-reviews {
-	// padding: toRem(30);
+	padding: toRem(30);
 	&.swiper {
 		overflow: visible;
 	}
@@ -162,11 +156,11 @@
 	&__wrapper {
 	}
 	.card-review {
-		filter: blur(toRem(2));
+		opacity: 0; /* Приховує неактивні слайди */
+		filter: blur(5px); /* Додає розмиття до неактивних слайдів */
 		transition:
-			filter 0.4s ease,
-			transform 0.4s ease,
-			opacity 3s ease;
+			opacity 0.4s ease,
+			filter 0.4s ease; /* Плавний перехід для видимості та розмиття */
 		gap: toRem(12);
 		padding: toRem(20);
 		border-radius: var(--xl-border-radius);
@@ -175,9 +169,6 @@
 		box-shadow: 0 0 toRem(24) 0 rgba(0, 0, 0, 0.12);
 		backdrop-filter: blur(toRem(8));
 		-webkit-backdrop-filter: blur(toRem(8));
-		&.swiper-slide-active {
-			filter: blur(0);
-		}
 		.card-review__header {
 			align-items: center;
 		}
@@ -212,3 +203,35 @@
 	backface-visibility: hidden;
 	overflow: hidden;
 }
+// [data-swiper-carousel-reviews] {
+// 	position: relative;
+// 	width: 100%;
+// 	overflow: hidden; /* Запобігає переповненню від неактивних слайдів */
+// }
+
+// [data-swiper-carousel-reviews] .swiper {
+// 	display: flex;
+// 	justify-content: center; /* Вирівнювання по горизонталі */
+// 	align-items: center; /* Вирівнювання по вертикалі */
+// }
+
+// [data-swiper-carousel-reviews] .swiper-wrapper {
+// 	display: flex;
+// 	justify-content: center; /* Вирівнювання по горизонталі */
+// 	align-items: center; /* Вирівнювання по вертикалі */
+// }
+
+// [data-swiper-carousel-reviews] .swiper-slide {
+// 	display: flex;
+// 	justify-content: center; /* Центрування вмісту слайда */
+// 	align-items: center; /* Центрування вмісту слайда */
+// 	opacity: 0; /* Приховує неактивні слайди */
+// 	transition: opacity 0.4s ease; /* Плавний перехід для видимості */
+// }
+
+// [data-swiper-carousel-reviews] .swiper-slide-active {
+// 	opacity: 1; /* Показує лише активний слайд */
+// 	position: relative;
+// 	left: 0 !important; /* Скасовує зміщення за замовчуванням */
+// 	transform: translateX(0) !important; /* Примусове вирівнювання по центру */
+// }

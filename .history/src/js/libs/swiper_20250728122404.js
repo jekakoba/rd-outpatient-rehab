@@ -69,7 +69,14 @@ function initSliders() {
 					perSlideOffset: 8,
 					slideShadows: false,
 				},
-
+				breakpoints: {
+					320: {
+						perSlideOffset: 3,
+					},
+					768.98: {
+						perSlideOffset: 8,
+					},
+				},
 				// loop: true,
 				grabCursor: true,
 				// autoplay: {

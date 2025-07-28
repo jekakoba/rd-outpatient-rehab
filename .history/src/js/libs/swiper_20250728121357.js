@@ -58,7 +58,7 @@ function initSliders() {
 				modules: [EffectCards, Autoplay],
 				observer: true,
 				observeParents: true,
-				slidesPerView: 1,
+				slidesPerView: 3,
 				spaceBetween: 12,
 				speed: 600,
 				effect: 'cards',
@@ -69,7 +69,6 @@ function initSliders() {
 					perSlideOffset: 8,
 					slideShadows: false,
 				},
-
 				// loop: true,
 				grabCursor: true,
 				// autoplay: {

@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import Marquee from './marque.js';
-import { Autoplay, EffectCards, Navigation } from 'swiper/modules';
+import { EffectCards, Navigation } from 'swiper/modules';
 
 function initSliders() {
 	if (document.querySelectorAll('[data-slider] .swiper').length > 0) {
@@ -55,26 +55,12 @@ function initSliders() {
 	if (document.querySelectorAll('[data-swiper-carousel-reviews]').length > 0) {
 		document.querySelectorAll('[data-swiper-carousel-reviews]').forEach(slider => {
 			const config = {
-				modules: [EffectCards, Autoplay],
 				observer: true,
 				observeParents: true,
 				slidesPerView: 1,
 				spaceBetween: 12,
-				speed: 600,
-				effect: 'cards',
-				// loop: true,
-				// cenetredSlides: true,
-				cardsEffect: {
-					perSlideRotate: 2,
-					perSlideOffset: 8,
-					slideShadows: false,
-				},
-
-				// loop: true,
-				grabCursor: true,
-				// autoplay: {
-				// 	delay: 1000,
-				// },
+				speed: 400,
+				EffectCards: true,
 			};
 
 			const swiperCarouselReviews = new Swiper(slider, config);

@@ -142,31 +142,17 @@
 //=================//
 
 .carousel-reviews-body {
-	// padding-inline: 30%;
-	@include adaptiveValue("padding-inline", 400, 110, 0, $containerWidth, 767.98);
-	@media (max-width: $mobile) {
-		padding-inline-start: toRem(16);
-		padding-inline-end: toRem(48);
-	}
-	// max-width: toRem(600);
-	// margin: 0 auto;
+	max-width: toRem(480);
+	margin: 0 auto;
 }
 
 .carousel-reviews {
-	// padding: toRem(30);
-	&.swiper {
-		overflow: visible;
-	}
+	padding: toRem(30);
 	// .carousel-reviews__wrapper
 
 	&__wrapper {
 	}
 	.card-review {
-		filter: blur(toRem(2));
-		transition:
-			filter 0.4s ease,
-			transform 0.4s ease,
-			opacity 3s ease;
 		gap: toRem(12);
 		padding: toRem(20);
 		border-radius: var(--xl-border-radius);
@@ -175,9 +161,6 @@
 		box-shadow: 0 0 toRem(24) 0 rgba(0, 0, 0, 0.12);
 		backdrop-filter: blur(toRem(8));
 		-webkit-backdrop-filter: blur(toRem(8));
-		&.swiper-slide-active {
-			filter: blur(0);
-		}
 		.card-review__header {
 			align-items: center;
 		}
@@ -202,13 +185,4 @@
 			color: var(--primary-text-light-color);
 		}
 	}
-}
-.swiper.carousel-reviews {
-	overflow: visible;
-}
-.carousel-reviews ::slotted(swiper-slide) {
-	transform-origin: center bottom;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	overflow: hidden;
 }

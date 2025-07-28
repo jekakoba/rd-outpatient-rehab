@@ -69,7 +69,6 @@ function initSliders() {
 					perSlideOffset: 8,
 					slideShadows: false,
 				},
-
 				// loop: true,
 				grabCursor: true,
 				// autoplay: {
