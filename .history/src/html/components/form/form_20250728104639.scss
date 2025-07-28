@@ -6,8 +6,9 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 }
-.input::-webkit-date-and-time-value {
+input[type="date"] {
 	text-align: left;
+	padding-left: 8px; /* Додає відступ для кращого вигляду */
 }
 .form {
 	display: grid;

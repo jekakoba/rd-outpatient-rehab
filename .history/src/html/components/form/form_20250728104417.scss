@@ -6,9 +6,6 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 }
-.input::-webkit-date-and-time-value {
-	text-align: left;
-}
 .form {
 	display: grid;
 	gap: toRem(12);
@@ -55,6 +52,7 @@ textarea {
 	outline: none;
 	font-size: toRem(18);
 	color: black;
+	text-align: left;
 	&::placeholder {
 		color: var(--primary-text-light-color-300);
 		font-size: toRem(14);
