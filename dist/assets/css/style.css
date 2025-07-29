@@ -686,9 +686,6 @@ body {
   touch-action: none;
   overscroll-behavior: none;
 }
-.loaded body {
-  opacity: 1;
-}
 @media (max-width: 29.99875em) {
   body {
     font-size: 0.875rem;
