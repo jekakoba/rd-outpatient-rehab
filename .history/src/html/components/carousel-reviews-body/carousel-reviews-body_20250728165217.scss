@@ -1,0 +1,428 @@
+// .banner-with-carousel {
+// 	position: relative;
+// 	width: 100%;
+// 	height: 100%;
+// 	.bubble-animation {
+// 		align-items: center;
+// 		display: flex;
+// 		flex-direction: column;
+// 		height: 120px;
+// 		perspective: 100px;
+// 		position: relative;
+// 	}
+
+// 	.bubble-animation .animation-dialog__img {
+// 		height: 100%;
+// 		position: relative;
+// 		width: 100%;
+// 		z-index: 1;
+// 	}
+
+// 	.bubble-animation .item {
+// 		height: 120px;
+// 		padding: 13px 26px 13px 13px;
+// 		position: absolute;
+// 		width: 100%;
+// 		z-index: 1;
+// 	}
+
+// 	.bubble-animation .item:before {
+// 		-webkit-backdrop-filter: blur(12px);
+// 		backdrop-filter: blur(12px);
+// 		background: hsla(0, 0%, 100%, 0.8);
+// 		border: 1px solid #fff;
+// 		border-radius: 16px;
+// 		box-shadow: 5.727px 20.046px 34.365px 4.296px rgba(33, 33, 33, 0.1);
+// 		content: "";
+// 		inset: 0;
+// 		position: absolute;
+// 	}
+
+// 	.bubble-animation .item:nth-child(3) {
+// 		height: 90%;
+// 		top: -26px;
+// 		width: 90%;
+// 	}
+
+// 	.bubble-animation .item:nth-child(3):before {
+// 		-webkit-backdrop-filter: blur(10.799999237060547px);
+// 		backdrop-filter: blur(10.799999237060547px);
+// 		background: hsla(0, 0%, 100%, 0.8);
+// 		border: 0.9px solid #fff;
+// 		border-radius: 14.4px;
+// 		box-shadow: 4.32px 15.12px 25.92px 3.24px rgba(33, 33, 33, 0.1);
+// 		filter: blur(0.7px);
+// 	}
+
+// 	.bubble-animation .item:nth-child(2) {
+// 		height: 80%;
+// 		top: -48px;
+// 		width: 80%;
+// 	}
+
+// 	.bubble-animation .item:nth-child(2):before {
+// 		-webkit-backdrop-filter: blur(9.600000381469727px);
+// 		backdrop-filter: blur(9.600000381469727px);
+// 		background: hsla(0, 0%, 100%, 0.8);
+// 		border: 0.8px solid #fff;
+// 		border-radius: 12.8px;
+// 		box-shadow: 3.84px 13.44px 23.04px 2.88px rgba(33, 33, 33, 0.1);
+// 		filter: blur(1.5px);
+// 	}
+
+// 	.bubble-animation .item:first-child {
+// 		height: 70%;
+// 		top: -70px;
+// 		width: 70%;
+// 	}
+
+// 	.bubble-animation .item:first-child:before {
+// 		background: hsla(0, 0%, 100%, 0.8);
+// 		border: 0.7px solid #fff;
+// 		border-radius: 15.2px;
+// 		filter: blur(3px);
+// 	}
+
+// 	.bubble-animation .animation-dialog__img img {
+// 		height: 100%;
+// 		object-fit: contain !important;
+// 		width: 100%;
+// 	}
+
+// 	@media (max-width: 1024px) {
+// 		.bubble-animation .item {
+// 			min-height: 180px !important;
+// 		}
+// 	}
+
+// 	@media (max-width: 744px) {
+// 		.bubble-animation .item {
+// 			min-height: 150px !important;
+// 		}
+// 	}
+
+// 	@media (min-width: 744px) {
+// 		.bubble-animation {
+// 			align-items: center;
+// 			display: flex;
+// 			flex-direction: column;
+// 			height: 188px;
+// 			perspective: 100px;
+// 			position: relative;
+// 		}
+
+// 		.bubble-animation .item {
+// 			height: 188px;
+// 			min-height: 150px !important;
+// 			width: 100%;
+// 		}
+
+// 		.bubble-animation .item:before {
+// 			-webkit-backdrop-filter: blur(12px);
+// 			backdrop-filter: blur(12px);
+// 			background: hsla(0, 0%, 100%, 0.8);
+// 			border: 1px solid #fff;
+// 			border-radius: 16px;
+// 			box-shadow: 5.727px 20.046px 34.365px 4.296px rgba(33, 33, 33, 0.1);
+// 			padding: 13px 26px 13px 13px;
+// 		}
+
+// 		.bubble-animation .item:nth-child(3) {
+// 			height: 90%;
+// 			top: -26px;
+// 			width: 90%;
+// 		}
+
+// 		.bubble-animation .item:nth-child(3):before {
+// 			-webkit-backdrop-filter: blur(10.799999237060547px);
+// 			backdrop-filter: blur(10.799999237060547px);
+// 			background: hsla(0, 0%, 100%, 0.8);
+// 			border: 0.9px solid #fff;
+// 			border-radius: 14.4px;
+// 			box-shadow: 4.32px 15.12px 25.92px 3.24px rgba(33, 33, 33, 0.1);
+// 		}
+
+// 		.bubble-animation .item:nth-child(2) {
+// 			height: 80%;
+// 			top: -48px;
+// 			width: 80%;
+// 		}
+
+// 		.bubble-animation .item:nth-child(2):before {
+// 			-webkit-backdrop-filter: blur(1.600000381469727px);
+// 			backdrop-filter: blur(1.600000381469727px);
+// 			background: hsla(0, 0%, 100%, 0.8);
+// 			border: 0.8px solid #fff;
+// 			border-radius: 12.8px;
+// 			box-shadow: 3.84px 13.44px 23.04px 2.88px rgba(33, 33, 33, 0.1);
+// 		}
+
+// 		.bubble-animation .item:first-child {
+// 			height: 70%;
+// 			top: -70px;
+// 			width: 70%;
+// 		}
+
+// 		.bubble-animation .item:first-child:before {
+// 			-webkit-backdrop-filter: blur(8.399999618530273px);
+// 			backdrop-filter: blur(8.399999618530273px);
+// 			background: hsla(0, 0%, 100%, 0.8);
+// 			border: 0.7px solid #fff;
+// 			border-radius: 11.2px;
+// 			box-shadow: 3.36px 11.76px 20.16px 2.52px rgba(33, 33, 33, 0.1);
+// 		}
+// 	}
+
+// 	.banner-with-carousel-logo {
+// 		color: #fff;
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: space-between;
+// 		min-height: 614px;
+// 		padding-bottom: 46px;
+// 		padding-top: 54px;
+// 		position: relative;
+// 	}
+
+// 	.wysiwyg {
+// 		align-items: center;
+// 		display: flex;
+// 		flex-direction: column;
+// 		padding-left: 15px;
+// 		padding-right: 15px;
+// 	}
+
+// 	.banner-with-carousel-logo .wysiwyg h1:not(.style-p) {
+// 		font-weight: 500 !important;
+// 	}
+
+// 	.banner-with-carousel-logo .wysiwyg h1:not(.style-p),
+// 	.banner-with-carousel-logo .wysiwyg p.style-h1 {
+// 		color: #fff;
+// 		font-size: 48px !important;
+// 		line-height: 48px !important;
+// 		margin-bottom: 16px !important;
+// 		text-align: center;
+// 	}
+
+// 	.banner-with-carousel-logo .wysiwyg h1.style-p,
+// 	.banner-with-carousel-logo .wysiwyg p:not(.style-h1) {
+// 		color: #fff;
+// 		font-size: 22px !important;
+// 		font-weight: 500 !important;
+// 		line-height: 146%;
+// 		margin-bottom: 28px !important;
+// 		margin-top: 0;
+// 		text-align: center;
+// 	}
+
+// 	.banner-with-carousel-logo__content {
+// 		align-items: center;
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: center;
+// 		overflow: hidden;
+// 		position: relative;
+// 		z-index: 1;
+// 	}
+
+// 	.banner-with-carousel-logo__buttons {
+// 		display: flex;
+// 		flex-direction: column;
+// 		margin-bottom: 54px;
+// 		margin-top: 0;
+// 	}
+
+// 	.banner-with-carousel-logo__buttons .btn {
+// 		margin-bottom: 0 !important;
+// 		margin-right: 0 !important;
+// 		min-width: 174px;
+// 	}
+
+// 	.banner-with-carousel-logo__buttons .btn:not(:last-child) {
+// 		margin-bottom: 18px !important;
+// 		margin-right: 18px !important;
+// 	}
+
+// 	.swiper-wrapper {
+// 		transition-timing-function: linear !important;
+// 	}
+
+// 	.swiper-slide {
+// 		height: 67px;
+// 		margin-right: 12px;
+// 		width: auto;
+// 	}
+
+// 	.swiper-slide img {
+// 		height: 100%;
+// 		width: auto;
+// 	}
+
+// 	.banner-with-carousel-logo__bg-img {
+// 		inset: 0;
+// 		position: absolute;
+// 		z-index: 0;
+// 	}
+
+// 	.banner-with-carousel-logo {
+// 		bottom: 0;
+// 		left: 50%;
+// 		position: absolute;
+// 		transform: translate(-50%, 45%);
+// 		width: 90.76923%;
+// 		z-index: 2;
+// 	}
+
+// 	@media (max-width: 744px) {
+// 		.banner-with-carousel-logo .wysiwyg h1.style-p,
+// 		.banner-with-carousel-logo .wysiwyg p:not(.style-h1) {
+// 			font-weight: 500 !important;
+// 			max-width: 284px;
+// 		}
+// 	}
+
+// 	@media (min-width: 744px) {
+// 		.banner-with-carousel-logo {
+// 			width: 534px;
+// 		}
+// 	}
+
+// 	@media (min-width: 1024px) {
+// 		.banner-with-carousel-logo {
+// 			min-height: 805px;
+// 			padding-bottom: 70px;
+// 			padding-top: 80px;
+// 		}
+
+// 		.banner-with-carousel-logo__carousel {
+// 			margin-top: 62px;
+// 			position: relative;
+// 		}
+
+// 		.banner-with-carousel-logo__buttons {
+// 			flex-direction: row;
+// 			margin-bottom: 0;
+// 		}
+
+// 		.banner-with-carousel-logo__buttons .btn:not(:last-child) {
+// 			margin-bottom: 0;
+// 			margin-right: 24px;
+// 		}
+
+// 		.banner-with-carousel-logo .wysiwyg h1:not(.style-p),
+// 		.banner-with-carousel-logo .wysiwyg p.style-h1 {
+// 			font-size: 92px !important;
+// 			line-height: 100% !important;
+// 			margin-bottom: 36px !important;
+// 			max-width: 950px !important;
+// 		}
+
+// 		.banner-with-carousel-logo .wysiwyg .style-p,
+// 		.banner-with-carousel-logo .wysiwyg p:not(.style-h1):not(.style-h2):not(.style-h3) {
+// 			font-size: 22px !important;
+// 			font-weight: 400;
+// 			letter-spacing: -0.5px;
+// 			line-height: 140%;
+// 			margin-bottom: 36px !important;
+// 		}
+// 	}
+
+// 	@media (min-width: 1300px) {
+// 		.banner-with-carousel-logo__carousel:after,
+// 		.banner-with-carousel-logo__carousel:before {
+// 			background: linear-gradient(90deg, #1b1b1b 36.77%, hsla(0, 0%, 5%, 0) 87.39%);
+// 			content: "";
+// 			height: 123px;
+// 			position: absolute;
+// 			top: 50%;
+// 			transform: translateY(-50%);
+// 			width: 24%;
+// 			z-index: 2;
+// 		}
+
+// 		.banner-with-carousel-logo__carousel:before {
+// 			left: 0;
+// 		}
+
+// 		.banner-with-carousel-logo__carousel:after {
+// 			right: 0;
+// 			transform: rotate(180deg) translateY(50%);
+// 		}
+// 	}
+// }
+.banner-with-carousel {
+	width: 500px;
+}
+.bubble-animation {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 120px;
+	perspective: 100px;
+	position: relative;
+}
+
+.bubble-animation .animation-dialog__img {
+	height: 100%;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+.bubble-animation .item {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 13px 26px 13px 13px;
+	z-index: 1;
+}
+
+.bubble-animation .item:before {
+	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
+	background: hsla(0, 0%, 100%, 0.8);
+	border: 1px solid #fff;
+	border-radius: 16px;
+	box-shadow: 5.727px 20.046px 34.365px 4.296px rgba(33, 33, 33, 0.1);
+	content: "";
+	inset: 0;
+	position: absolute;
+}
+
+.bubble-animation .item:not(:first-child) {
+	opacity: 0; /* Приховуємо всі картки, крім першої */
+}
+
+.bubble-animation .animation-dialog__img img {
+	height: 100%;
+	object-fit: contain !important;
+	width: 100%;
+}
+
+/* Адаптивність */
+@media (max-width: 1024px) {
+	.bubble-animation .item {
+		min-height: 180px !important;
+	}
+}
+
+@media (max-width: 744px) {
+	.bubble-animation .item {
+		min-height: 150px !important;
+	}
+}
+
+@media (min-width: 744px) {
+	.bubble-animation {
+		height: 188px;
+	}
+
+	.bubble-animation .item {
+		height: 188px;
+		min-height: 150px !important;
+		width: 100%;
+	}
+}

@@ -1,0 +1,220 @@
+.reviews {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(56);
+	@media (max-width: $mobile) {
+		gap: toRem(30);
+	}
+	// .reviews__container
+
+	&__container {
+	}
+
+	// .reviews__cards
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(16);
+	}
+	&__slider {
+		padding-block: toRem(10);
+		@media (max-width: $mobile) {
+			padding-inline: toRem(16);
+		}
+		.swiper-navigation {
+			@media (min-width: $mobile) {
+				display: none;
+			}
+			@media (max-width: $mobile) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: toRem(18);
+			}
+		}
+	}
+
+	&__wrapper {
+		@media (min-width: $mobile) {
+			display: flex;
+			flex-direction: column;
+			gap: toRem(16);
+		}
+	}
+}
+
+.label-text {
+}
+.title {
+}
+.card-review {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(20);
+	padding: toRem(24);
+	border-radius: var(--main-border-radius);
+	background-color: white;
+	border: toRem(1) solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 toRem(10) 0 rgba(0, 0, 0, 0.1);
+	& > * {
+		position: relative;
+		z-index: 190;
+	}
+	@media (min-width: $mobile) {
+		width: toRem(520);
+	}
+	// .card-review__header
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(10);
+		align-items: start;
+	}
+
+	// .card-review__profile
+
+	&__profile {
+	}
+}
+.profile-review {
+	display: flex;
+	align-items: start;
+	gap: toRem(10);
+	// .profile-review__avatar
+
+	&__avatar {
+		flex: 0 0 toRem(48);
+		width: toRem(48);
+		height: toRem(48);
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .profile-review__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: toRem(4);
+		color: black;
+	}
+
+	// .profile-review__name
+
+	&__name {
+		font-size: toRem(14);
+	}
+
+	// .profile-review__profession
+
+	&__profession {
+		font-size: toRem(12);
+		font-weight: 400;
+	}
+	&__quote {
+		font-size: toRem(14);
+		color: rgba(0, 0, 0, 0.8);
+		line-height: 1.6;
+		letter-spacing: toRem(-0.28);
+	}
+}
+.rating {
+	display: flex;
+	align-items: center;
+	gap: toRem(5);
+	// .rating__item
+
+	&__item {
+		width: toRem(15);
+		height: toRem(15);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+//=================//
+
+// .carousel-reviews-body {
+// 	// padding-inline: 30%;
+// 	@include adaptiveValue("padding-inline", 400, 110, 0, $containerWidth, 767.98);
+// 	@media (max-width: $mobile) {
+// 		padding-inline-start: toRem(16);
+// 		padding-inline-end: toRem(48);
+// 	}
+// 	// max-width: toRem(600);
+// 	// margin: 0 auto;
+// }
+
+// .carousel-reviews {
+// 	// padding: toRem(30);
+// 	&.swiper {
+// 		overflow: visible;
+// 	}
+// 	// .carousel-reviews__wrapper
+
+// 	&__wrapper {
+// 	}
+// 	.card-review {
+// 		filter: blur(toRem(2));
+// 		transition:
+// 			filter 0.4s ease,
+// 			transform 0.4s ease,
+// 			opacity 3s ease;
+// 		gap: toRem(12);
+// 		padding: toRem(20);
+// 		border-radius: var(--xl-border-radius);
+// 		border: toRem(1) solid #fff;
+// 		background-color: rgba(255, 255, 255, 0.8);
+// 		box-shadow: 0 0 toRem(24) 0 rgba(0, 0, 0, 0.12);
+// 		backdrop-filter: blur(toRem(8));
+// 		-webkit-backdrop-filter: blur(toRem(8));
+// 		&.swiper-slide-active {
+// 			filter: blur(0);
+// 		}
+// 		.card-review__header {
+// 			align-items: center;
+// 		}
+// 		.profile-review__profession {
+// 			font-size: toRem(14);
+// 			color: var(--primary-text-light-color-400);
+// 		}
+// 		.profile-review__name,
+// 		.profile-review__profession {
+// 			font-weight: 500;
+// 		}
+// 		.profile-review__avatar {
+// 			flex: 0 0 toRem(45);
+// 			width: toRem(45);
+// 			height: toRem(45);
+// 		}
+// 		.profile-review__body {
+// 			gap: 0;
+// 		}
+// 		.card-review__quote {
+// 			// font-size: toRem(14);
+// 			color: var(--primary-text-light-color);
+// 		}
+// 	}
+// }
+// .swiper.carousel-reviews {
+// 	overflow: visible;
+// }
+// .carousel-reviews ::slotted(swiper-slide) {
+// 	transform-origin: center bottom;
+// 	-webkit-backface-visibility: hidden;
+// 	backface-visibility: hidden;
+// 	overflow: hidden;
+// }
+
+//====================//

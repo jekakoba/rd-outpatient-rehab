@@ -541,6 +541,7 @@
   --small-border-radius: 8px;
   --input-border-radius: 12px;
   --xs-border-radius: 12px;
+  --xl-border-radius: 16px;
 }
 html {
   box-sizing: border-box;
@@ -678,11 +679,15 @@ body {
   line-height: 1.4;
   font-weight: 500;
   color: var(--primary-text-color);
+  transition: opacity 0.3s;
 }
 .lock body {
   overflow: hidden;
   touch-action: none;
   overscroll-behavior: none;
+}
+.loaded body {
+  opacity: 1;
 }
 @media (max-width: 29.99875em) {
   body {
@@ -1895,6 +1900,24 @@ body {
   .title-block__title {
     font-size: 1rem;
   }
+}
+.reviews-section._space-section {
+  padding-bottom: 2.5rem;
+}
+@media (max-width: 47.99875em) {
+  .reviews-section._space-section {
+    padding-bottom: 1.25rem;
+  }
+}
+.reviews-section__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6.375rem;
+}
+@media (max-width: 47.99875em) {
+  .reviews-section__body {
+    gap: 5rem;
+  }
 }[class*=__container] {
   max-width: 79.375rem;
   margin: 0 auto;
@@ -1913,6 +1936,10 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.input::-webkit-date-and-time-value {
+  text-align: left;
 }
 
 .form {
@@ -1952,6 +1979,7 @@ textarea {
   height: 3rem;
   outline: none;
   font-size: 1.125rem;
+  color: black;
 }
 .input::placeholder {
   color: var(--primary-text-light-color-300);
@@ -2070,6 +2098,10 @@ textarea.input {
   background-color: white;
   border: 0.0625rem solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0.625rem 0 rgba(0, 0, 0, 0.1);
+}
+.card-review > * {
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 47.99875em) {
   .card-review {
@@ -2597,6 +2629,59 @@ textarea.input {
   .can-help-you__content {
     gap: 1.5rem;
   }
+}[class*=__container] {
+  max-width: 79.375rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+[class*=__container_xl] {
+  max-width: 69rem !important;
+}
+
+.slider {
+  position: relative;
+  max-width: 25rem;
+  width: 100%;
+  min-height: 12.5rem;
+  margin: 0 auto;
+  perspective: 6.25rem;
+}
+
+.item {
+  position: absolute;
+  max-width: 25rem !important;
+  min-height: 6.25rem;
+}
+.item.card-review {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(0.625rem);
+  -webkit-backdrop-filter: blur(0.625rem);
+  opacity: var(--card-opacity, 1);
+  padding: 1.25rem;
+  gap: 1rem;
+}
+@media (max-width: 47.99875em) {
+  .item.card-review {
+    gap: 0.75rem;
+  }
+}
+.item.card-review .profile-review__body {
+  gap: 0;
+}
+.item.card-review .profile-review__name {
+  font-size: 1rem;
+}
+.item.card-review .profile-review__profession {
+  color: var(--primary-text-light-color-400);
+  font-size: 0.875rem;
+}
+.item.card-review .card-review__header {
+  align-items: center;
+}
+.item.card-review .card-review__quote {
+  color: var(--primary-text-light-color);
 }[class*=__container] {
   max-width: 79.375rem;
   margin: 0 auto;
